@@ -12,12 +12,8 @@
 class MyTestClientHandler: public ClientHandler {
     Solver<string,string>* solver;
     CacheManager<string>* cm;
-
 public:
-    MyTestClientHandler(const Solver<string,string> &solver, const CacheManager<string> &cm);
-
     MyTestClientHandler(Solver<string, string> *solver, CacheManager<string> *cm);
-
     void handleClient(int client_socket);
 };
 

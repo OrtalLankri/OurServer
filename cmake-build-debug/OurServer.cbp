@@ -96,6 +96,9 @@
 		<Unit filename="/home/adi/CLionProjects/OurServer/FileCacheManager.h">
 			<Option target="OurServer"/>
 		</Unit>
+		<Unit filename="/home/adi/CLionProjects/OurServer/Main.h">
+			<Option target="OurServer"/>
+		</Unit>
 		<Unit filename="/home/adi/CLionProjects/OurServer/MySerialServer.cpp">
 			<Option target="OurServer"/>
 		</Unit>
@@ -106,6 +109,12 @@
 			<Option target="OurServer"/>
 		</Unit>
 		<Unit filename="/home/adi/CLionProjects/OurServer/MyTestClientHandler.h">
+			<Option target="OurServer"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/OurServer/Searchable.h">
+			<Option target="OurServer"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/OurServer/Searcher.h">
 			<Option target="OurServer"/>
 		</Unit>
 		<Unit filename="/home/adi/CLionProjects/OurServer/Server.h">

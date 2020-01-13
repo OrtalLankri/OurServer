@@ -9,9 +9,9 @@
 #include "MySerialServer.h"
 
 void MySerialServer::stop(){
-    time_out=true;
-
+//    time_out = true;
 }
+
 void MySerialServer::open(int port, ClientHandler* c) {
     // create thread
      thread *t = new thread(&MySerialServer::readFromClient, port, c);
@@ -24,8 +24,8 @@ void MySerialServer::open(int port, ClientHandler* c) {
  * @param socketfd the socketfd
  */
 void MySerialServer::readFromClient(int port,ClientHandler* c) {
-/// while connected!!!
-    while (!time_out) {
+    while (!false) {
+//        while (!time_out) {
         /**
      * opens the server communication and runs it on a new thread
      * @return the number of indexes to move in the commands map

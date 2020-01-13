@@ -37,7 +37,7 @@ public:
         capacity = cacheCapacity;
     }
     bool inCache(string key) {
-        return true;
+        return cache.count(key);
     }
     void insert(string key, T obj) {
         // if key already exists in cache update it
@@ -54,7 +54,8 @@ public:
             cache[key] = itr;
         }
         // write (or update) the object to the file system
-        string name = T::class_name + "_" + key;
+//        string name = T::class_name + "_" + key;
+        string name = "_" + key;
         ofstream outFile(name, ios::binary|ios::out);
         if (outFile.is_open()) {
             outFile.write((char *) &obj, sizeof(obj));
@@ -74,7 +75,8 @@ public:
         }
         else {
             // check if the object exist in the file system
-            string name = T::class_name + "_" + key;
+//            string name = T::class_name + "_" + key;
+            string name = "_" + key;
             ifstream inFile(name, ios::binary|ios::in);
             if (inFile.is_open()) {
                 T obj;
