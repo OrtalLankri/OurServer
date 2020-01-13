@@ -23,3 +23,5 @@ CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.cpp
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.h
 
+CMakeFiles/OurServer.dir/main.cpp.o: ../main.cpp
+

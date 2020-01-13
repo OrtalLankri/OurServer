@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ortal/CLionProjects/OurServer/cmake-build-debug"/>
+				<Option working_dir="/home/adi/CLionProjects/OurServer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ortal/CLionProjects/OurServer/cmake-build-debug"/>
+				<Option working_dir="/home/adi/CLionProjects/OurServer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="OurServer">
-				<Option output="/home/ortal/CLionProjects/OurServer/cmake-build-debug/OurServer" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ortal/CLionProjects/OurServer/cmake-build-debug"/>
+				<Option output="/home/adi/CLionProjects/OurServer/cmake-build-debug/OurServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adi/CLionProjects/OurServer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 OurServer"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 OurServer"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="OurServer/fast">
-				<Option output="/home/ortal/CLionProjects/OurServer/cmake-build-debug/OurServer" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ortal/CLionProjects/OurServer/cmake-build-debug"/>
+				<Option output="/home/adi/CLionProjects/OurServer/cmake-build-debug/OurServer" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adi/CLionProjects/OurServer/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,63 +67,66 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 OurServer/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 OurServer/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ortal/CLionProjects/OurServer/cmake-build-debug"/>
+				<Option working_dir="/home/adi/CLionProjects/OurServer/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/ortal/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/adi/CLionProjects/OurServer/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/CacheManager.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/CacheManager.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/ClientHandler.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/ClientHandler.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/FileCacheManager.cpp">
+		<Unit filename="/home/adi/CLionProjects/OurServer/FileCacheManager.cpp">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/FileCacheManager.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/FileCacheManager.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/MySerialServer.cpp">
+		<Unit filename="/home/adi/CLionProjects/OurServer/MySerialServer.cpp">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/MySerialServer.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/MySerialServer.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/MyTestClientHandler.cpp">
+		<Unit filename="/home/adi/CLionProjects/OurServer/MyTestClientHandler.cpp">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/MyTestClientHandler.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/MyTestClientHandler.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/Server.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/Server.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/Solver.cpp">
+		<Unit filename="/home/adi/CLionProjects/OurServer/Solver.cpp">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/Solver.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/Solver.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/StringReverser.cpp">
+		<Unit filename="/home/adi/CLionProjects/OurServer/StringReverser.cpp">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/StringReverser.h">
+		<Unit filename="/home/adi/CLionProjects/OurServer/StringReverser.h">
 			<Option target="OurServer"/>
 		</Unit>
-		<Unit filename="/home/ortal/CLionProjects/OurServer/CMakeLists.txt">
+		<Unit filename="/home/adi/CLionProjects/OurServer/main.cpp">
+			<Option target="OurServer"/>
+		</Unit>
+		<Unit filename="/home/adi/CLionProjects/OurServer/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
