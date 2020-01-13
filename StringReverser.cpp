@@ -5,5 +5,5 @@
 #include "StringReverser.h"
 
 string StringReverser::solve (string problem) {
-\\
+//
 }
