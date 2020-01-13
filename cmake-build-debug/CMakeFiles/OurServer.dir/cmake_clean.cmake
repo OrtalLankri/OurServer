@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o"
   "CMakeFiles/OurServer.dir/Solver.cpp.o"
   "CMakeFiles/OurServer.dir/StringReverser.cpp.o"
+  "CMakeFiles/OurServer.dir/fileCacheManager.cpp.o"
   "CMakeFiles/OurServer.dir/main.cpp.o"
   "OurServer"
   "OurServer.pdb"

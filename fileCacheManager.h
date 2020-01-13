@@ -12,7 +12,7 @@
 
 using namespace std;
 
-template <class T> class CacheManager {
+template <class T> class fileCacheManager {
     unsigned int capacity;
     unordered_map<string, typename list<pair<string,T>>::iterator> cache;
     list<pair<string, T>> cacheList;
@@ -32,7 +32,7 @@ template <class T> class CacheManager {
         cache.erase(cache.find(lruKey));
     }
 public:
-    CacheManager(int cacheCapacity) {
+    fileCacheManager(int cacheCapacity) {
         capacity = cacheCapacity;
     }
     void insert(string key, T obj) {
