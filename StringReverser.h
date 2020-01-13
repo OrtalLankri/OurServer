@@ -5,7 +5,6 @@
 #ifndef OURSERVER_STRINGSOLVER_H
 #define OURSERVER_STRINGSOLVER_H
 
-
 #include "Solver.h"
 
 class StringSolver : public Solver<class P, class S>{
