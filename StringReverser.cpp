@@ -5,4 +5,5 @@
 #include "StringReverser.h"
 
 S StringSolver::solve(P problem) {
+
 }
