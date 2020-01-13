@@ -10,9 +10,9 @@
 #include "CacheManager.h"
 
 class MyTestClientHandler: public ClientHandler {
-    Solver<string> solver;
+    Solver<string,string> solver;
 public:
-    MyTestClientHandler(const Solver<string> &solver, const CacheManager<string> &cm);
+    MyTestClientHandler(const Solver<string,string> &solver, const CacheManager<string> &cm);
 
 private:
     CacheManager<string> cm;

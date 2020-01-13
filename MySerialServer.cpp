@@ -9,9 +9,9 @@
 
 void MySerialServer::open(int port,ClientHandler c) {
     // create thread
-    thread *t = new thread(&MySerialServer::readFromClient, port, c);
+//    thread *t = new thread(&MySerialServer::readFromClient, port, c);
 //    Singleton::getInstance()->addThread(t);
-    t->detach();
+   // t->detach();
 
 }
 /**

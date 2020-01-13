@@ -26,7 +26,7 @@ int MyTestClientHandler::handleClient(int client_socket) {
     }
 }
 
-MyTestClientHandler::MyTestClientHandler(const Solver<string> &solver, const CacheManager<string> &cm) : solver(solver),
+MyTestClientHandler::MyTestClientHandler(const Solver<string,string> &solver, const CacheManager<string> &cm) : solver(solver),
                                                                                                          cm(cm) {
 }
 
