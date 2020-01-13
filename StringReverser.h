@@ -11,7 +11,6 @@
 class StringSolver : public Solver<class P, class S>{
 public:
     S solve(P problem);
-
 };
 
 
