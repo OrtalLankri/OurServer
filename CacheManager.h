@@ -11,9 +11,9 @@ using namespace std;
 
 template <class T> class CacheManager {
 public:
-    void insert(string  key, T object);
-    T get(string key);
-    bool inCache(string key);
+    virtual void insert(string  key, T object) = 0;
+    virtual T get(string key) = 0;
+    virtual bool inCache(string key) = 0;
 
 };
 

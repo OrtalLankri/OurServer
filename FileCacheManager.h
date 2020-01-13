@@ -9,10 +9,11 @@
 #include <list>
 #include <functional>
 #include <fstream>
+#include "CacheManager.h"
 
 using namespace std;
 
-template <class T> class fileCacheManager {
+template <class T> class FileCacheManager : public CacheManager<string>{
     unsigned int capacity;
     unordered_map<string, typename list<pair<string,T>>::iterator> cache;
     list<pair<string, T>> cacheList;
@@ -32,8 +33,11 @@ template <class T> class fileCacheManager {
         cache.erase(cache.find(lruKey));
     }
 public:
-    fileCacheManager(int cacheCapacity) {
+    FileCacheManager(int cacheCapacity) {
         capacity = cacheCapacity;
+    }
+    bool inCache(string key) {
+        return true;
     }
     void insert(string key, T obj) {
         // if key already exists in cache update it

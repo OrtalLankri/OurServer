@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adi/CLionProjects/OurServer
+CMAKE_SOURCE_DIR = /home/ortal/CLionProjects/OurServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ortal/CLionProjects/OurServer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,6 +122,33 @@ OurServer: cmake_check_build_system
 OurServer/fast:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/build
 .PHONY : OurServer/fast
+
+FileCacheManager.o: FileCacheManager.cpp.o
+
+.PHONY : FileCacheManager.o
+
+# target to build an object file
+FileCacheManager.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/FileCacheManager.cpp.o
+.PHONY : FileCacheManager.cpp.o
+
+FileCacheManager.i: FileCacheManager.cpp.i
+
+.PHONY : FileCacheManager.i
+
+# target to preprocess a source file
+FileCacheManager.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/FileCacheManager.cpp.i
+.PHONY : FileCacheManager.cpp.i
+
+FileCacheManager.s: FileCacheManager.cpp.s
+
+.PHONY : FileCacheManager.s
+
+# target to generate assembly for a file
+FileCacheManager.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/FileCacheManager.cpp.s
+.PHONY : FileCacheManager.cpp.s
 
 MySerialServer.o: MySerialServer.cpp.o
 
@@ -231,60 +258,6 @@ StringReverser.cpp.s:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/StringReverser.cpp.s
 .PHONY : StringReverser.cpp.s
 
-fileCacheManager.o: fileCacheManager.cpp.o
-
-.PHONY : fileCacheManager.o
-
-# target to build an object file
-fileCacheManager.cpp.o:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/fileCacheManager.cpp.o
-.PHONY : fileCacheManager.cpp.o
-
-fileCacheManager.i: fileCacheManager.cpp.i
-
-.PHONY : fileCacheManager.i
-
-# target to preprocess a source file
-fileCacheManager.cpp.i:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/fileCacheManager.cpp.i
-.PHONY : fileCacheManager.cpp.i
-
-fileCacheManager.s: fileCacheManager.cpp.s
-
-.PHONY : fileCacheManager.s
-
-# target to generate assembly for a file
-fileCacheManager.cpp.s:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/fileCacheManager.cpp.s
-.PHONY : fileCacheManager.cpp.s
-
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,6 +267,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... OurServer"
 	@echo "... edit_cache"
+	@echo "... FileCacheManager.o"
+	@echo "... FileCacheManager.i"
+	@echo "... FileCacheManager.s"
 	@echo "... MySerialServer.o"
 	@echo "... MySerialServer.i"
 	@echo "... MySerialServer.s"
@@ -306,12 +282,6 @@ help:
 	@echo "... StringReverser.o"
 	@echo "... StringReverser.i"
 	@echo "... StringReverser.s"
-	@echo "... fileCacheManager.o"
-	@echo "... fileCacheManager.i"
-	@echo "... fileCacheManager.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

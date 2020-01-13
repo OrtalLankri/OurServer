@@ -7,6 +7,7 @@
 
 #include <string>
 #include "Solver.h"
+#include <algorithm>
 
 using namespace std;
 

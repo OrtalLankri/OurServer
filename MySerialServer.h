@@ -9,9 +9,11 @@
 using namespace server_side;
 
 class MySerialServer : public Server {
-    void readFromClient(int port, ClientHandler c);
 public:
-    void open(int port,ClientHandler c);
+    static void readFromClient(int port,ClientHandler* c);
+    void open(int port,ClientHandler* c);
+    void stop();
+
 };
 
 

@@ -12,6 +12,6 @@ using namespace std;
 
 class ClientHandler{
 public:
-    virtual int handleClient(int client_socket);
+    virtual void handleClient(int client_socket) = 0;
 };
 #endif //OURSERVER_CLIENTHANDLER_H
