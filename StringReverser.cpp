@@ -4,6 +4,6 @@
 
 #include "StringReverser.h"
 
-//S StringSolver::solve(P problem) {
+string StringReverser::solve (string problem) {
 
-//}
+}

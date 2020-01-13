@@ -5,11 +5,14 @@
 #ifndef OURSERVER_STRINGSOLVER_H
 #define OURSERVER_STRINGSOLVER_H
 
+#include <string>
 #include "Solver.h"
 
-class StringSolver : public Solver<class P, class S>{
+using namespace std;
+
+class StringReverser : public Solver<string, string>{
 public:
-    S solve(P problem);
+    string solve(string problem);
 };
 
 
