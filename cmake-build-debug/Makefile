@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adi/CLionProjects/OurServer
+CMAKE_SOURCE_DIR = /home/ortal/CLionProjects/OurServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ortal/CLionProjects/OurServer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,114 @@ OurServer/fast:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/build
 .PHONY : OurServer/fast
 
+AStar.o: AStar.cpp.o
+
+.PHONY : AStar.o
+
+# target to build an object file
+AStar.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/AStar.cpp.o
+.PHONY : AStar.cpp.o
+
+AStar.i: AStar.cpp.i
+
+.PHONY : AStar.i
+
+# target to preprocess a source file
+AStar.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/AStar.cpp.i
+.PHONY : AStar.cpp.i
+
+AStar.s: AStar.cpp.s
+
+.PHONY : AStar.s
+
+# target to generate assembly for a file
+AStar.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/AStar.cpp.s
+.PHONY : AStar.cpp.s
+
+BFS.o: BFS.cpp.o
+
+.PHONY : BFS.o
+
+# target to build an object file
+BFS.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/BFS.cpp.o
+.PHONY : BFS.cpp.o
+
+BFS.i: BFS.cpp.i
+
+.PHONY : BFS.i
+
+# target to preprocess a source file
+BFS.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/BFS.cpp.i
+.PHONY : BFS.cpp.i
+
+BFS.s: BFS.cpp.s
+
+.PHONY : BFS.s
+
+# target to generate assembly for a file
+BFS.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/BFS.cpp.s
+.PHONY : BFS.cpp.s
+
+BestFS.o: BestFS.cpp.o
+
+.PHONY : BestFS.o
+
+# target to build an object file
+BestFS.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/BestFS.cpp.o
+.PHONY : BestFS.cpp.o
+
+BestFS.i: BestFS.cpp.i
+
+.PHONY : BestFS.i
+
+# target to preprocess a source file
+BestFS.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/BestFS.cpp.i
+.PHONY : BestFS.cpp.i
+
+BestFS.s: BestFS.cpp.s
+
+.PHONY : BestFS.s
+
+# target to generate assembly for a file
+BestFS.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/BestFS.cpp.s
+.PHONY : BestFS.cpp.s
+
+DFS.o: DFS.cpp.o
+
+.PHONY : DFS.o
+
+# target to build an object file
+DFS.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/DFS.cpp.o
+.PHONY : DFS.cpp.o
+
+DFS.i: DFS.cpp.i
+
+.PHONY : DFS.i
+
+# target to preprocess a source file
+DFS.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/DFS.cpp.i
+.PHONY : DFS.cpp.i
+
+DFS.s: DFS.cpp.s
+
+.PHONY : DFS.s
+
+# target to generate assembly for a file
+DFS.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/DFS.cpp.s
+.PHONY : DFS.cpp.s
+
 FileCacheManager.o: FileCacheManager.cpp.o
 
 .PHONY : FileCacheManager.o
@@ -149,6 +257,60 @@ FileCacheManager.s: FileCacheManager.cpp.s
 FileCacheManager.cpp.s:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/FileCacheManager.cpp.s
 .PHONY : FileCacheManager.cpp.s
+
+Matrix.o: Matrix.cpp.o
+
+.PHONY : Matrix.o
+
+# target to build an object file
+Matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Matrix.cpp.o
+.PHONY : Matrix.cpp.o
+
+Matrix.i: Matrix.cpp.i
+
+.PHONY : Matrix.i
+
+# target to preprocess a source file
+Matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Matrix.cpp.i
+.PHONY : Matrix.cpp.i
+
+Matrix.s: Matrix.cpp.s
+
+.PHONY : Matrix.s
+
+# target to generate assembly for a file
+Matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Matrix.cpp.s
+.PHONY : Matrix.cpp.s
+
+MyClientHandler.o: MyClientHandler.cpp.o
+
+.PHONY : MyClientHandler.o
+
+# target to build an object file
+MyClientHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/MyClientHandler.cpp.o
+.PHONY : MyClientHandler.cpp.o
+
+MyClientHandler.i: MyClientHandler.cpp.i
+
+.PHONY : MyClientHandler.i
+
+# target to preprocess a source file
+MyClientHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/MyClientHandler.cpp.i
+.PHONY : MyClientHandler.cpp.i
+
+MyClientHandler.s: MyClientHandler.cpp.s
+
+.PHONY : MyClientHandler.s
+
+# target to generate assembly for a file
+MyClientHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/MyClientHandler.cpp.s
+.PHONY : MyClientHandler.cpp.s
 
 MySerialServer.o: MySerialServer.cpp.o
 
@@ -204,6 +366,33 @@ MyTestClientHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.s
 .PHONY : MyTestClientHandler.cpp.s
 
+ObjectAdapter.o: ObjectAdapter.cpp.o
+
+.PHONY : ObjectAdapter.o
+
+# target to build an object file
+ObjectAdapter.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o
+.PHONY : ObjectAdapter.cpp.o
+
+ObjectAdapter.i: ObjectAdapter.cpp.i
+
+.PHONY : ObjectAdapter.i
+
+# target to preprocess a source file
+ObjectAdapter.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/ObjectAdapter.cpp.i
+.PHONY : ObjectAdapter.cpp.i
+
+ObjectAdapter.s: ObjectAdapter.cpp.s
+
+.PHONY : ObjectAdapter.s
+
+# target to generate assembly for a file
+ObjectAdapter.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/ObjectAdapter.cpp.s
+.PHONY : ObjectAdapter.cpp.s
+
 Solver.o: Solver.cpp.o
 
 .PHONY : Solver.o
@@ -230,6 +419,33 @@ Solver.s: Solver.cpp.s
 Solver.cpp.s:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Solver.cpp.s
 .PHONY : Solver.cpp.s
+
+State.o: State.cpp.o
+
+.PHONY : State.o
+
+# target to build an object file
+State.cpp.o:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/State.cpp.o
+.PHONY : State.cpp.o
+
+State.i: State.cpp.i
+
+.PHONY : State.i
+
+# target to preprocess a source file
+State.cpp.i:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/State.cpp.i
+.PHONY : State.cpp.i
+
+State.s: State.cpp.s
+
+.PHONY : State.s
+
+# target to generate assembly for a file
+State.cpp.s:
+	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/State.cpp.s
+.PHONY : State.cpp.s
 
 StringReverser.o: StringReverser.cpp.o
 
@@ -294,18 +510,42 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... OurServer"
 	@echo "... edit_cache"
+	@echo "... AStar.o"
+	@echo "... AStar.i"
+	@echo "... AStar.s"
+	@echo "... BFS.o"
+	@echo "... BFS.i"
+	@echo "... BFS.s"
+	@echo "... BestFS.o"
+	@echo "... BestFS.i"
+	@echo "... BestFS.s"
+	@echo "... DFS.o"
+	@echo "... DFS.i"
+	@echo "... DFS.s"
 	@echo "... FileCacheManager.o"
 	@echo "... FileCacheManager.i"
 	@echo "... FileCacheManager.s"
+	@echo "... Matrix.o"
+	@echo "... Matrix.i"
+	@echo "... Matrix.s"
+	@echo "... MyClientHandler.o"
+	@echo "... MyClientHandler.i"
+	@echo "... MyClientHandler.s"
 	@echo "... MySerialServer.o"
 	@echo "... MySerialServer.i"
 	@echo "... MySerialServer.s"
 	@echo "... MyTestClientHandler.o"
 	@echo "... MyTestClientHandler.i"
 	@echo "... MyTestClientHandler.s"
+	@echo "... ObjectAdapter.o"
+	@echo "... ObjectAdapter.i"
+	@echo "... ObjectAdapter.s"
 	@echo "... Solver.o"
 	@echo "... Solver.i"
 	@echo "... Solver.s"
+	@echo "... State.o"
+	@echo "... State.i"
+	@echo "... State.s"
 	@echo "... StringReverser.o"
 	@echo "... StringReverser.i"
 	@echo "... StringReverser.s"

@@ -2,7 +2,6 @@
 #ifndef OURSERVER_SERVER_H
 #define OURSERVER_SERVER_H
 
-bool time_out = false;
 
 #include "ClientHandler.h"
 

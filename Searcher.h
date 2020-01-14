@@ -5,8 +5,11 @@
 #ifndef OURSERVER_SEARCHER_H
 #define OURSERVER_SEARCHER_H
 
-class Searcher {
+#include "Searchable.h"
 
+template <class T> class Searcher {
+public:
+    S Search(Searchable<T> s);
 };
 
 #endif //OURSERVER_SEARCHER_H

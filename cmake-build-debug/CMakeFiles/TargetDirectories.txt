@@ -1,3 +1,3 @@
-/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/OurServer.dir
-/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/OurServer.dir
+/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/edit_cache.dir

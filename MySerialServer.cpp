@@ -8,8 +8,10 @@
 #include <unistd.h>
 #include "MySerialServer.h"
 
+extern bool time_out;
+
 void MySerialServer::stop(){
-//    time_out = true;
+    time_out = true;
 }
 
 void MySerialServer::open(int port, ClientHandler* c) {
@@ -24,12 +26,7 @@ void MySerialServer::open(int port, ClientHandler* c) {
  * @param socketfd the socketfd
  */
 void MySerialServer::readFromClient(int port,ClientHandler* c) {
-    while (!false) {
-//        while (!time_out) {
-        /**
-     * opens the server communication and runs it on a new thread
-     * @return the number of indexes to move in the commands map
-     */
+    while (!time_out) {
         // create socket
         int socketfd = socket(AF_INET, SOCK_STREAM, 0);
         // if creation failed

@@ -27,6 +27,3 @@ void MyTestClientHandler::handleClient(int client_socket) {
     }
 }
 
-MyTestClientHandler::MyTestClientHandler(Solver<string, string> *solver, CacheManager<string> *cm) : solver(solver),
-                                                                                                     cm(cm) {}
-
