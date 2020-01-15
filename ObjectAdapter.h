@@ -37,6 +37,7 @@ class ObjectAdapter : public Solver<string, vector<Cell*>> {
     }
         return trace;
     }
+
 };
 
 
