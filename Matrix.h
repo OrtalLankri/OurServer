@@ -18,6 +18,7 @@ public:
     bool isGoalState(State<string> s);
     vector<State<string>> getAllStates(State<string> s);
 
+
 };
 
 
