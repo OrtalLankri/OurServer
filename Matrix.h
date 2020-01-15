@@ -27,9 +27,9 @@ public:
     void setSize(int size) {
         this->matrixSize = size;
     }
-    State<vector<int>>* getInitialState();
-    bool isGoalState(State<vector<int>>* s);
-    vector<State<vector<int>>*> getAllStates(State<vector<int>>* s);
+    State<vector<int>>* getInitialState() override;
+    bool isGoalState(State<vector<int>>* s) override;
+    vector<State<vector<int>>*> getAllStates(State<vector<int>>* s) override;
 };
 
 

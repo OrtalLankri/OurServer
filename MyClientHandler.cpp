@@ -15,18 +15,18 @@ void MyClientHandler::handleClient(int client_socket) {
             lines.push_back(line);
             key += line;
         }
-//        Matrix* matrix = this->createMatrix(lines);
         string solution;
         if (this->cm->inCache(key)){
             solution = this->cm->get(key);
         } else {
-            //solution = this->solver->solve(lines);
+            Matrix* matrix = this->createMatrix(lines);
+            solution = this->solver->solve(matrix);
             this->cm->insert(key, solution);
         }
         send(client_socket, solution.c_str(), strlen(solution.c_str()),0);
     }
 }
-/*
+
 Matrix* MyClientHandler::createMatrix(deque<string> lines) {
     Matrix matrix;
     // goal
@@ -46,6 +46,7 @@ Matrix* MyClientHandler::createMatrix(deque<string> lines) {
     initials.push_back(atoi(initialI));
     initials.push_back(atoi(initialJ));
     matrix.setStates(new Cell(initials), new Cell(goals));
+    // states
     int matrixSize = lines.size();
     matrix.setSize(matrixSize);
     int i;
@@ -62,5 +63,5 @@ Matrix* MyClientHandler::createMatrix(deque<string> lines) {
             token = strtok(NULL, ", ");
         }
     }
+    return &matrix;
 }
-*/

@@ -1,10 +1,6 @@
-//
-// Created by adi on 1/15/20.
-//
 
 #ifndef OURSERVER_CELL_H
 #define OURSERVER_CELL_H
-
 
 #include <string>
 #include <vector>
@@ -19,22 +15,22 @@ public:
     Cell(vector<int> state) {
         this->state = state;
     }
-    double getCost() {
-        return this->cost;
-    }
-    void setCost(double c) {
-        this->cost = c;
-    }
-    void setCameFrom(State<vector<int>>* s) {
-        this->cameFrom = (Cell*) s;
-    }
-    Cell* getCameFrom() {
-        return this->cameFrom;
-    }
-    vector<int> getState() {
+    vector<int> getState() override {
         return this->state;
     }
-    bool equals(State<vector<int>>* s);
+    double getCost() override {
+        return this->cost;
+    }
+    void setCost(double c) override {
+        this->cost = c;
+    }
+    Cell* getCameFrom() override {
+        return this->cameFrom;
+    }
+    void setCameFrom(State<vector<int>>* s) override {
+        this->cameFrom = (Cell*) s;
+    }
+    bool equals(State<vector<int>>* s) override;
 };
 
 #endif //OURSERVER_CELL_H

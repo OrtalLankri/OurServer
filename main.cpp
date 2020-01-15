@@ -1,7 +1,4 @@
 
-#ifndef OURSERVER_MAIN1_H
-#define OURSERVER_MAIN1_H
-
 #include <iostream>
 #include <cstring>
 #include <deque>
@@ -11,14 +8,13 @@
 bool time_out = false;
 
 using namespace boot;
-void createMatrix(deque<string> lines);
+void create(deque<string> lines);
 
 int main(int argc, char *argv[])
 {
     Main main1;
 //    main1.main(argc,argv);
     // not needed
-    cout<<"ok"<<endl;
     deque<string> lines;
     lines.push_back("8,2,8,6,5");
     lines.push_back("8,3 ,8, 6,-1");
@@ -27,11 +23,11 @@ int main(int argc, char *argv[])
     lines.push_back(" 12 , 31 , 0 , 6 , -1 ");
     lines.push_back("0, 0");
     lines.push_back("36,36");
-    createMatrix(lines);
+    create(lines);
     return 0;
 }
 
-void createMatrix(deque<string> lines) {
+void create(deque<string> lines) {
     // goal
     string goal = lines.back();
     lines.pop_back();
@@ -64,6 +60,4 @@ void createMatrix(deque<string> lines) {
     }
     j;
 }
-
-#endif //OURSERVER_MAIN1_H
 

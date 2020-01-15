@@ -23,8 +23,8 @@ class BestFS :public Searcher<S,T>{
     };
 public:
     S search(Searchable<T>* s) {
-        vector<State<T> *> openList;
-        vector<State<T> *> closed;
+        vector<State<T>*> openList;
+        vector<State<T>*> closed;
         openList.push_back(s->getInitialState());
         while (openList.size() > 0) {
             State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
