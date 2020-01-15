@@ -28,7 +28,7 @@ public:
     vector<int> getState() {
         return this->state;
     }
-    bool equals(State<vector<int>> s);
+    bool equals(State<vector<int>>* s);
 };
 
 #endif //OURSERVER_CELL_H

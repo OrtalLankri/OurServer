@@ -11,7 +11,7 @@ public:
     virtual T getState() = 0;
     virtual double getCost() = 0;
     virtual void setCost(double cost) = 0;
-    virtual bool equals(State<T> s) = 0;
+    virtual bool equals(State<T>* s) = 0;
 };
 
 
