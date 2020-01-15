@@ -14,7 +14,7 @@ using namespace std;
 class Cell : public State<vector<int>> {
     vector<int> state;
     double cost;
-//   State<vector<int>> cameFrom;
+    Cell* cameFrom;
 public:
     Cell(vector<int> state) {
         this->state = state;
@@ -24,6 +24,12 @@ public:
     }
     void setCost(double c) {
         this->cost = c;
+    }
+    void setCameFrom(State<vector<int>>* s) {
+        this->cameFrom = (Cell*) s;
+    }
+    Cell* getCameFrom() {
+        return this->cameFrom;
     }
     vector<int> getState() {
         return this->state;
