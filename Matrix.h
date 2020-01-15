@@ -20,12 +20,12 @@ class Matrix : public Searchable<vector<int>> {
     vector<State<vector<int>>*> allStates;
     int matrixSize;
 public:
+    Matrix(int size) {
+        this->matrixSize = size;
+    }
     void setStates(State<vector<int>>* initial, State<vector<int>>* goal) {
         this->intialState = (Cell*) initial;
         this->goalState = (Cell*) goal;
-    }
-    void setSize(int size) {
-        this->matrixSize = size;
     }
     State<vector<int>>* getInitialState() override;
     bool isGoalState(State<vector<int>>* s) override;
