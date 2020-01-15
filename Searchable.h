@@ -10,6 +10,7 @@
 
 using namespace std;
 
+
 template <class T> class Searchable {
 public:
     virtual void setStates(State<T>* initial, State<T>* goal) = 0;
