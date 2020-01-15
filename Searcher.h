@@ -7,9 +7,10 @@
 
 #include "Searchable.h"
 
-template <class T> class Searcher {
+template <class S,class T> class Searcher {
 public:
-    S Search(Searchable<T> s);
+    virtual S Search(Searchable<T> s)=0;
+    void updateBackTrace(State<T>* s);
 };
 
 #endif //OURSERVER_SEARCHER_H
