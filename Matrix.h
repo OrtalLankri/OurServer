@@ -24,6 +24,9 @@ public:
         this->intialState = (Cell*) initial;
         this->goalState = (Cell*) goal;
     }
+    void setSize(int size) {
+        this->matrixSize = size;
+    }
     State<vector<int>>* getInitialState();
     bool isGoalState(State<vector<int>>* s);
     vector<State<vector<int>>*> getAllStates(State<vector<int>>* s);

@@ -1,6 +1,3 @@
-//
-// Created by ortal on 12/01/2020.
-//
 
 #ifndef OURSERVER_CLIENTHANDLER_H
 #define OURSERVER_CLIENTHANDLER_H

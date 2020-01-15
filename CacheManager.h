@@ -1,6 +1,3 @@
-//
-// Created by ortal on 12/01/2020.
-//
 
 #ifndef OURSERVER_CACHEMANAGER_H
 #define OURSERVER_CACHEMANAGER_H

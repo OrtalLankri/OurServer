@@ -12,7 +12,7 @@ public:
     virtual double getCost() = 0;
     virtual void setCost(double cost) = 0;
     virtual State<T>* getCameFrom() = 0;
-    virtual void setCameFrom() = 0;
+    virtual void setCameFrom(State<T>* state) = 0;
     virtual bool equals(State<T>* s) = 0;
 };
 

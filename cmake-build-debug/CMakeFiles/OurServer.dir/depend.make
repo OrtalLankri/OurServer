@@ -10,6 +10,10 @@ CMakeFiles/OurServer.dir/BFS.cpp.o: ../BFS.h
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../BestFS.cpp
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../BestFS.h
 
+CMakeFiles/OurServer.dir/Cell.cpp.o: ../Cell.cpp
+CMakeFiles/OurServer.dir/Cell.cpp.o: ../Cell.h
+CMakeFiles/OurServer.dir/Cell.cpp.o: ../State.h
+
 CMakeFiles/OurServer.dir/DFS.cpp.o: ../DFS.cpp
 CMakeFiles/OurServer.dir/DFS.cpp.o: ../DFS.h
 
@@ -17,16 +21,21 @@ CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: ../CacheManager.h
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: ../FileCacheManager.cpp
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: ../FileCacheManager.h
 
+CMakeFiles/OurServer.dir/Matrix.cpp.o: ../Cell.h
 CMakeFiles/OurServer.dir/Matrix.cpp.o: ../Matrix.cpp
 CMakeFiles/OurServer.dir/Matrix.cpp.o: ../Matrix.h
 CMakeFiles/OurServer.dir/Matrix.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/Matrix.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../CacheManager.h
+CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Cell.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../ClientHandler.h
+CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Matrix.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../MyClientHandler.cpp
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../MyClientHandler.h
+CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Solver.h
+CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../CacheManager.h
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../ClientHandler.h

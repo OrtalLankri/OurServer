@@ -1,6 +1,3 @@
-//
-// Created by adi on 11/26/19.
-//
 
 #ifndef EX2_EX2_H
 #define EX2_EX2_H
