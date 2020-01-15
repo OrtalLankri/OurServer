@@ -8,17 +8,25 @@
 
 #include <string>
 #include "Searchable.h"
+#include "Cell.h"
+#include <vector>
 
 using namespace std;
 
-class Matrix : public Searchable<string> {
+class Matrix : public Searchable<vector<int>> {
+    vector<vector<Cell*>> matrix;
+    Cell* intialState;
+    Cell* goalState;
+    vector<State<vector<int>>*> allStates;
+    int matrixSize;
 public:
-    // State<string???> type T
-    State<string> getInitialState();
-    bool isGoalState(State<string> s);
-    vector<State<string>> getAllStates(State<string> s);
-
-
+    void setStates(State<vector<int>>* initial, State<vector<int>>* goal) {
+        this->intialState = (Cell*) initial;
+        this->goalState = (Cell*) goal;
+    }
+    State<vector<int>>* getInitialState();
+    bool isGoalState(State<vector<int>>* s);
+    vector<State<vector<int>>*> getAllStates(State<vector<int>>* s);
 };
 
 
