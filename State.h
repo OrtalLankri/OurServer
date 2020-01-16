@@ -1,10 +1,6 @@
-//
-// Created by ortal on 14/01/2020.
-//
 
 #ifndef OURSERVER_STATE_H
 #define OURSERVER_STATE_H
-
 
 template <class T> class State {
 public:
@@ -15,6 +11,5 @@ public:
     virtual void setCameFrom(State<T>* state) = 0;
     virtual bool equals(State<T>* s) = 0;
 };
-
 
 #endif //OURSERVER_STATE_H

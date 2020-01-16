@@ -15,20 +15,19 @@ void MyClientHandler::handleClient(int client_socket) {
             lines.push_back(line);
             key += line;
         }
-//        Matrix* matrix = this->createMatrix(lines);
         string solution;
         if (this->cm->inCache(key)){
             solution = this->cm->get(key);
         } else {
-            //solution = this->solver->solve(lines);
+            Matrix* matrix = this->createMatrix(lines);
+            solution = this->solver->solve(matrix);
             this->cm->insert(key, solution);
         }
         send(client_socket, solution.c_str(), strlen(solution.c_str()),0);
     }
 }
-/*
+
 Matrix* MyClientHandler::createMatrix(deque<string> lines) {
-    Matrix matrix;
     // goal
     string goal = lines.back();
     lines.pop_back();
@@ -45,22 +44,22 @@ Matrix* MyClientHandler::createMatrix(deque<string> lines) {
     vector<int> initials;
     initials.push_back(atoi(initialI));
     initials.push_back(atoi(initialJ));
-    matrix.setStates(new Cell(initials), new Cell(goals));
     int matrixSize = lines.size();
-    matrix.setSize(matrixSize);
-    int i;
-    int j;
+    Matrix* matrix = new Matrix(matrixSize);
+    matrix->setStates(new Cell(initials), new Cell(goals));
+    // states
+    int i, j;
     for (i = 0; i < matrixSize; i++) {
         string row = lines[i];
-        char* token = strtok(strdup(row.c_str()), ", ");
+        char* cost = strtok(strdup(row.c_str()), ", ");
         for (j = 0; j < matrixSize; j++) {
             vector<int> state;
             state.push_back(i);
             state.push_back(j);
             Cell* cell = new Cell(state);
-            cell->setCost(atoi(token));
-            token = strtok(NULL, ", ");
+            cell->setCost(atoi(cost));
+            cost = strtok(NULL, ", ");
         }
     }
+    return matrix;
 }
-*/

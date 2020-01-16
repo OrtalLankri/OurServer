@@ -11,9 +11,8 @@ using namespace server_side;
 class MySerialServer : public Server {
 public:
     static void readFromClient(int port,ClientHandler* c);
-    void open(int port, ClientHandler* c);
-    void stop();
-
+    void open(int port, ClientHandler* c) override;
+    void stop() override;
 };
 
 

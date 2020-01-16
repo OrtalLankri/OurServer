@@ -1,6 +1,3 @@
-//
-// Created by adi on 1/13/20.
-//
 
 #ifndef OURSERVER_SEARCHABLE_H
 #define OURSERVER_SEARCHABLE_H
@@ -9,7 +6,6 @@
 #include <vector>
 
 using namespace std;
-
 
 template <class T> class Searchable {
 public:

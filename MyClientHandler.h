@@ -15,12 +15,12 @@
 #include "Matrix.h"
 
 class MyClientHandler: public ClientHandler {
-    Solver<vector<string>,string>* solver;
+    Solver<Matrix*,string>* solver;
     CacheManager<string>* cm;
-//    Matrix* createMatrix(deque<string> lines);
+    Matrix* createMatrix(deque<string> lines);
 public:
-    MyClientHandler(Solver<vector<string>, string> *solver, CacheManager<string> *cm) : solver(solver), cm(cm) {}
-    void handleClient(int client_socket);
+    MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string> *cm) : solver(solver), cm(cm) {}
+    void handleClient(int client_socket) override;
 };
 
 

@@ -10,6 +10,14 @@
 functional
 -
 
+/home/adi/CLionProjects/OurServer/Cell.h
+string
+-
+vector
+-
+State.h
+/home/adi/CLionProjects/OurServer/State.h
+
 /home/adi/CLionProjects/OurServer/ClientHandler.h
 iostream
 -
@@ -56,6 +64,38 @@ Solver.h
 StringReverser.h
 /home/adi/CLionProjects/OurServer/StringReverser.h
 
+/home/adi/CLionProjects/OurServer/Matrix.h
+string
+-
+Searchable.h
+/home/adi/CLionProjects/OurServer/Searchable.h
+Cell.h
+/home/adi/CLionProjects/OurServer/Cell.h
+vector
+-
+
+/home/adi/CLionProjects/OurServer/MyClientHandler.cpp
+MyClientHandler.h
+/home/adi/CLionProjects/OurServer/MyClientHandler.h
+
+/home/adi/CLionProjects/OurServer/MyClientHandler.h
+ClientHandler.h
+/home/adi/CLionProjects/OurServer/ClientHandler.h
+unistd.h
+-
+cstring
+-
+sys/socket.h
+-
+list
+-
+vector
+-
+deque
+-
+Matrix.h
+/home/adi/CLionProjects/OurServer/Matrix.h
+
 /home/adi/CLionProjects/OurServer/MySerialServer.h
 Server.h
 /home/adi/CLionProjects/OurServer/Server.h
@@ -68,11 +108,19 @@ Solver.h
 CacheManager.h
 /home/adi/CLionProjects/OurServer/CacheManager.h
 
+/home/adi/CLionProjects/OurServer/Searchable.h
+State.h
+/home/adi/CLionProjects/OurServer/State.h
+vector
+-
+
 /home/adi/CLionProjects/OurServer/Server.h
 ClientHandler.h
 /home/adi/CLionProjects/OurServer/ClientHandler.h
 
 /home/adi/CLionProjects/OurServer/Solver.h
+
+/home/adi/CLionProjects/OurServer/State.h
 
 /home/adi/CLionProjects/OurServer/StringReverser.h
 string
