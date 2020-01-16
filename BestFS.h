@@ -36,14 +36,19 @@ public:
                 return closed;
             }
             vector<State<T> *> successors = s->getAllStates(top);
+            if(successors.size()==0){
+                continue;
+            }
             for (int i = 0; i < successors.size(); i++) {
                 State<T> * itOpen=find(openList.begin(),openList.end(),successors[i]);
                 State<T> * itClosed=find(closed.begin(),closed.end(),successors[i]);
                 successors[i].setCameFrom(top);
                 if(itOpen !=openList.end() && itClosed!=closed.end()){
                     openList.push_back(successors[i]);
-                } else {
-                    continue;
+                }
+                //if this new path is better than previous one
+                else {
+                    if(successors[i].getCost)
                 }
             }
         }
