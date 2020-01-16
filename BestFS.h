@@ -30,10 +30,10 @@ public:
             State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
             openList.erase(top);
             closed.push_back(top);
-            updateBackTrace(top);
+            //
             if (isGoalState(top->getState())) {
                 //path
-                return closed;
+                return updateBackTrace(top);
             }
             vector<State<T> *> successors = s->getAllStates(top);
             if(successors.size()==0){
@@ -42,13 +42,21 @@ public:
             for (int i = 0; i < successors.size(); i++) {
                 State<T> * itOpen=find(openList.begin(),openList.end(),successors[i]);
                 State<T> * itClosed=find(closed.begin(),closed.end(),successors[i]);
-                successors[i].setCameFrom(top);
                 if(itOpen !=openList.end() && itClosed!=closed.end()){
                     openList.push_back(successors[i]);
+                    successors[i].setCameFrom(top);
                 }
                 //if this new path is better than previous one
                 else {
-                    if(successors[i].getCost)
+                    if(successors[i]->getCost()+top->getCost()<successors[i]->getCost()){
+                        if(itOpen !=openList.end()){
+                            openList.push_back(successors[i]);
+                        } else{
+                            successors[i].setCameFrom(top);
+                            //update cost
+                            successors[i].setCost(successors[i].getCost()+top->getCost());
+                        }
+                    }
                 }
             }
         }

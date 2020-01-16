@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/adi/CLionProjects/OurServer
+CMAKE_SOURCE_DIR = /home/ortal/CLionProjects/OurServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/ortal/CLionProjects/OurServer/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/99/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -420,60 +420,6 @@ ObjectAdapter.cpp.s:
 	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/ObjectAdapter.cpp.s
 .PHONY : ObjectAdapter.cpp.s
 
-Solver.o: Solver.cpp.o
-
-.PHONY : Solver.o
-
-# target to build an object file
-Solver.cpp.o:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Solver.cpp.o
-.PHONY : Solver.cpp.o
-
-Solver.i: Solver.cpp.i
-
-.PHONY : Solver.i
-
-# target to preprocess a source file
-Solver.cpp.i:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Solver.cpp.i
-.PHONY : Solver.cpp.i
-
-Solver.s: Solver.cpp.s
-
-.PHONY : Solver.s
-
-# target to generate assembly for a file
-Solver.cpp.s:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/Solver.cpp.s
-.PHONY : Solver.cpp.s
-
-State.o: State.cpp.o
-
-.PHONY : State.o
-
-# target to build an object file
-State.cpp.o:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/State.cpp.o
-.PHONY : State.cpp.o
-
-State.i: State.cpp.i
-
-.PHONY : State.i
-
-# target to preprocess a source file
-State.cpp.i:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/State.cpp.i
-.PHONY : State.cpp.i
-
-State.s: State.cpp.s
-
-.PHONY : State.s
-
-# target to generate assembly for a file
-State.cpp.s:
-	$(MAKE) -f CMakeFiles/OurServer.dir/build.make CMakeFiles/OurServer.dir/State.cpp.s
-.PHONY : State.cpp.s
-
 StringReverser.o: StringReverser.cpp.o
 
 .PHONY : StringReverser.o
@@ -570,12 +516,6 @@ help:
 	@echo "... ObjectAdapter.o"
 	@echo "... ObjectAdapter.i"
 	@echo "... ObjectAdapter.s"
-	@echo "... Solver.o"
-	@echo "... Solver.i"
-	@echo "... Solver.s"
-	@echo "... State.o"
-	@echo "... State.i"
-	@echo "... State.s"
 	@echo "... StringReverser.o"
 	@echo "... StringReverser.i"
 	@echo "... StringReverser.s"

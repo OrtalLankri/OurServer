@@ -15,7 +15,7 @@
 using namespace std;
 
 class ObjectAdapter : public Solver<Matrix*, string> {
-    string updateBackTrace(vector<Cell*> s);
+    string updateBackTrace(State<vector<int>>* s);
 public:
     string solve(Matrix* problem) override;
 };

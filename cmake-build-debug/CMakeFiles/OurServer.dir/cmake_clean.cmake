@@ -10,8 +10,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/OurServer.dir/MySerialServer.cpp.o"
   "CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o"
   "CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o"
-  "CMakeFiles/OurServer.dir/Solver.cpp.o"
-  "CMakeFiles/OurServer.dir/State.cpp.o"
   "CMakeFiles/OurServer.dir/StringReverser.cpp.o"
   "CMakeFiles/OurServer.dir/main.cpp.o"
   "OurServer"
