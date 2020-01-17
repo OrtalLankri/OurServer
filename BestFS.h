@@ -1,20 +1,18 @@
-//
-// Created by ortal on 14/01/2020.
-//
 
 #ifndef OURSERVER_BESTFS_H
 #define OURSERVER_BESTFS_H
 
-#include <string>
 #include "Searcher.h"
-#include "Matrix.h"
+#include "Searchable.h"
 #include "State.h"
 #include <deque>
+#include <string>
 
 using namespace std;
 
-template <class T, class S>
-class BestFS :public Searcher<S,T>{
+template <class T>
+class BestFS : public Searcher<T> {
+    int nodesEvaluated;
     class Compare {
     public:
         bool operator()(State<T> *left, State<T> *right) {
@@ -22,12 +20,13 @@ class BestFS :public Searcher<S,T>{
         }
     };
 public:
-    S search(Searchable<T>* s) {
+    vector<State<T>*> search(Searchable<T>* s) override {
         vector<State<T>*> openList;
         vector<State<T>*> closed;
         openList.push_back(s->getInitialState());
         while (openList.size() > 0) {
             State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
+            this->nodesEvaluated = 1;
             openList.erase(top);
             closed.push_back(top);
             //
@@ -60,6 +59,9 @@ public:
                 }
             }
         }
+    }
+    int getNumberOfNodesEvaluated() override {
+        return this->nodesEvaluated;
     }
 };
 

@@ -6,11 +6,12 @@ CMakeFiles/OurServer.dir/AStar.cpp.o: ../AStar.h
 
 CMakeFiles/OurServer.dir/BFS.cpp.o: ../BFS.cpp
 CMakeFiles/OurServer.dir/BFS.cpp.o: ../BFS.h
+CMakeFiles/OurServer.dir/BFS.cpp.o: ../Searchable.h
+CMakeFiles/OurServer.dir/BFS.cpp.o: ../Searcher.h
+CMakeFiles/OurServer.dir/BFS.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../BestFS.cpp
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../BestFS.h
-CMakeFiles/OurServer.dir/BestFS.cpp.o: ../Cell.h
-CMakeFiles/OurServer.dir/BestFS.cpp.o: ../Matrix.h
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../Searcher.h
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../State.h
@@ -21,6 +22,9 @@ CMakeFiles/OurServer.dir/Cell.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/DFS.cpp.o: ../DFS.cpp
 CMakeFiles/OurServer.dir/DFS.cpp.o: ../DFS.h
+CMakeFiles/OurServer.dir/DFS.cpp.o: ../Searchable.h
+CMakeFiles/OurServer.dir/DFS.cpp.o: ../Searcher.h
+CMakeFiles/OurServer.dir/DFS.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: ../CacheManager.h
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: ../FileCacheManager.cpp
@@ -56,16 +60,12 @@ CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../MyTestClientHandler.h
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../Solver.h
 
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Cell.h
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Matrix.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.cpp
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.h
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../State.h
-
-CMakeFiles/OurServer.dir/Solver.cpp.o: ../Solver.cpp
-CMakeFiles/OurServer.dir/Solver.cpp.o: ../Solver.h
-
-CMakeFiles/OurServer.dir/State.cpp.o: ../State.cpp
-CMakeFiles/OurServer.dir/State.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.cpp

@@ -4,7 +4,7 @@
 
 #include "ObjectAdapter.h"
 
-string ObjectAdapter::solve(Matrix* problem){
+string ObjectAdapter::solve(Matrix* problem) {
     // check all algorithm and choose the best one
     // get the vector<Cell*> solution from the search method in the chosen algorithm
     //return this->updateBackTrace(solution);
