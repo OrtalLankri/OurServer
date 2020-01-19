@@ -13,7 +13,7 @@ using namespace std;
 
 template <class T>
 class BestFS : public Searcher<T> {
-    int nodesEvaluated;
+    int nodesEvaluated=0;
     class Compare {
     public:
         bool operator()(State<T> *left, State<T> *right) {
@@ -25,11 +25,12 @@ public:
         vector<State<T>*> openList;
         vector<State<T>*> closed;
         openList.push_back(s->getInitialState());
+        this->nodesEvaluated ++;
         while (openList.size() > 0) {
             auto t = (min_element(openList.begin(), openList.end(), Compare()));
 //            State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
             State<T> *top = *t;
-            this->nodesEvaluated = 1;
+            this->nodesEvaluated ++;
             openList.erase(t);
             closed.push_back(top);
             //
@@ -54,6 +55,7 @@ public:
                     if(successors[i]->getCost()+top->getCost()<successors[i]->getCost()){
                         if(itOpen !=openList.end()){
                             openList.push_back(successors[i]);
+                            this->nodesEvaluated ++;
                         } else{
                             successors[i]->setCameFrom(top);
                             //update cost
