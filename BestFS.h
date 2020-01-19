@@ -34,13 +34,13 @@ public:
                 //path
                 return updateBackTrace(top);
             }
-            vector<State<T> *> successors = s->getAllStates(top);
+            vector<State<T>*> successors = s->getAllStates(top);
             if(successors.size()==0){
                 continue;
             }
             for (int i = 0; i < successors.size(); i++) {
-                State<T> * itOpen=find(openList.begin(),openList.end(),successors[i]);
-                State<T> * itClosed=find(closed.begin(),closed.end(),successors[i]);
+                State<T>* itOpen=find(openList.begin(),openList.end(),successors[i]);
+                State<T>* itClosed=find(closed.begin(),closed.end(),successors[i]);
                 if(itOpen !=openList.end() && itClosed!=closed.end()){
                     openList.push_back(successors[i]);
                     successors[i].setCameFrom(top);
