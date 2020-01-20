@@ -13,7 +13,6 @@
 
 using namespace std;
 
-
 template <class T>
 class BestFS : public Searcher<T> {
     int nodesEvaluated;
