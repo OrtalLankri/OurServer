@@ -11,28 +11,45 @@
 #include "Matrix.h"
 #include <deque>
 #include <string>
+#include <iostream>
+
 using namespace std;
 template<class T>
 class AStar :public Searcher<T> {
     int nodesEvaluated=0;
     class Compare {
-        T goal;
+        State<T>* goal;
     public:
-        Compare(T g){
+        Compare(State<T>* g){
             this->goal=g;
         }
-        using Point = std::pair<int,int>;
+        using Point = std::vector<int>;
         double distance(Point cur, Point goal){
-            int x = abs(cur.first - goal.first);
-            int y = abs(cur.second - goal.second);
+            int x = abs(cur[0] - goal[0]);
+            int y = abs(cur[1] - goal[1]);
             return x+y;
         }
 
         bool operator()(State<T> *left, State<T> *right) {
             return left->getCost() + distance(left->getState(),
-                    this->goal) < right->getCost() + distance(right->getState(), this->goal);
+                    this->goal->getState()) < right->getCost() + distance(right->getState(),
+                            this->goal->getState());
         }
     };
+    vector<State<T>*> getPath(State<T>* goal) {
+        deque<State<T>*> q;
+        State<T>* x = goal;
+        while (x != nullptr) {
+            q.push_front(x);
+            x = x->getCameFrom();
+        }
+        vector<State<T>*> path;
+        while (!q.empty()) {
+            path.push_back(q.front());
+            q.pop_front();
+        }
+        return path;
+    }
 public:
     vector<State<T>*> search(Searchable<T>* s) override {
         vector<State<T> *> openList;
@@ -40,34 +57,33 @@ public:
         openList.push_back(s->getInitialState());
         this->nodesEvaluated ++;
         while (openList.size() > 0) {
-            auto t = (min_element(openList.begin(), openList.end(), Compare(s->getGoalState)));
+            auto t = (min_element(openList.begin(), openList.end(), Compare(s->getGoalState())));
             State<T> *top = *t;
             openList.erase(t);
             closed.push_back(top);
             if (s->isGoalState(top)) {
-                return {top};
+                cout<<"end";
+                return getPath(top);
             }
             vector<State<T>*> successors = s->getAllStates(top);
 
             for (State<T> *&successor : successors) {
                 successor->setCameFrom(top);
-                successor->setCost(successor->getCost() + top->getCost());
+                successor->setTempCost(successor->getCost() + top->getTempCost());
 
 
-                if (find_if(closed.begin(), closed.end(),
-                            [successor](decltype(*begin(closed)) ptr )  {
+                if (find_if(closed.begin(), closed.end(),[successor](decltype(*begin(closed)) ptr )  {
                                 return ptr->getState() == successor->getState();
                             }) != closed.end()) {
                     continue;
                 }
 
-                auto itr = find_if(openList.begin(), openList.end(),
-                                   [successor](decltype(*begin(openList)) ptr)    {
+                auto itr = find_if(openList.begin(), openList.end(),[successor](decltype(*begin(openList)) ptr) {
                                        return ptr->getState() == successor->getState();
                                    });
 
                 if (itr != openList.end()) {
-                    (*itr)->setCost(min((*itr)->getCost(), top->getCost() + (*itr)->getCost()));
+                    (*itr)->setTempCost(min((*itr)->getTempCost(), top->getTempCost() + (*itr)->getCost()));
                 } else{
                     openList.push_back(successor);
                     this->nodesEvaluated++;
