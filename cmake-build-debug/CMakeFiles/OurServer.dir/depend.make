@@ -3,6 +3,11 @@
 
 CMakeFiles/OurServer.dir/AStar.cpp.o: ../AStar.cpp
 CMakeFiles/OurServer.dir/AStar.cpp.o: ../AStar.h
+CMakeFiles/OurServer.dir/AStar.cpp.o: ../Cell.h
+CMakeFiles/OurServer.dir/AStar.cpp.o: ../Matrix.h
+CMakeFiles/OurServer.dir/AStar.cpp.o: ../Searchable.h
+CMakeFiles/OurServer.dir/AStar.cpp.o: ../Searcher.h
+CMakeFiles/OurServer.dir/AStar.cpp.o: ../State.h
 
 CMakeFiles/OurServer.dir/BFS.cpp.o: ../BFS.cpp
 CMakeFiles/OurServer.dir/BFS.cpp.o: ../BFS.h
@@ -46,6 +51,9 @@ CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../State.h
 
+CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../MyParallelServer.cpp
+CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../MyParallelServer.h
+
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../CacheManager.h
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../ClientHandler.h
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../MySerialServer.cpp
@@ -59,8 +67,11 @@ CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../MyTestClientHandler.cpp
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../MyTestClientHandler.h
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../Solver.h
 
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../AStar.h
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../BFS.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../BestFS.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Cell.h
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../DFS.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Matrix.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.cpp
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.h

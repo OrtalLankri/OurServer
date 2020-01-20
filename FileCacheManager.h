@@ -10,7 +10,7 @@
 
 using namespace std;
 
-template <class T> class FileCacheManager : public CacheManager<string>{
+template <class T> class FileCacheManager : public CacheManager<string,string>{
     unsigned int capacity;
     unordered_map<string, typename list<pair<string,T>>::iterator> cache;
     list<pair<string, T>> cacheList;
@@ -36,7 +36,7 @@ public:
     bool inCache(string key) {
         return cache.count(key);
     }
-    void insert(string key, T obj) {
+    void insert(string key, string obj) {
         // if key already exists in cache update it
         if (!cache.empty() && cache.count(key)) {
             updateToMru(key, obj);
@@ -53,10 +53,12 @@ public:
         // write (or update) the object to the file system
 //        string name = T::class_name + "_" + key;
         string name = "_" + key;
-        ofstream outFile(name, ios::binary|ios::out);
-        if (outFile.is_open()) {
-            outFile.write((char *) &obj, sizeof(obj));
-            outFile.close();
+        //ofstream outFile(name, ios::binary|ios::out);
+        FILE* outFile= fopen(name.c_str(), "w");
+        if (outFile!= nullptr) {
+            fprintf(outFile,obj.c_str());
+            //outFile.write((char *) &obj, sizeof(obj));
+            fclose(outFile);
         }
         else {
             throw "Error";
@@ -74,11 +76,14 @@ public:
             // check if the object exist in the file system
 //            string name = T::class_name + "_" + key;
             string name = "_" + key;
-            ifstream inFile(name, ios::binary|ios::in);
-            if (inFile.is_open()) {
-                T obj;
-                inFile.read((char *) &obj, sizeof(obj));
-                inFile.close();
+            //fstream inFile(name, ios::in);
+            FILE* file = fopen(name.c_str(), "r");
+            if (file != nullptr) {
+                //T obj;
+                char* obj;
+                fscanf(file,obj);
+                //inFile.read((char *) &obj, sizeof(obj));
+                fclose(file);
                 // update the object to be the most recently used in the cache
                 deleteLru();
                 cacheList.push_front({key, obj});

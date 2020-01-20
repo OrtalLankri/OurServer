@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OurServer.dir/FileCacheManager.cpp.o"
   "CMakeFiles/OurServer.dir/Matrix.cpp.o"
   "CMakeFiles/OurServer.dir/MyClientHandler.cpp.o"
+  "CMakeFiles/OurServer.dir/MyParallelServer.cpp.o"
   "CMakeFiles/OurServer.dir/MySerialServer.cpp.o"
   "CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o"
   "CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o"

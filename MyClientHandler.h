@@ -16,10 +16,10 @@
 
 class MyClientHandler: public ClientHandler {
     Solver<Matrix*,string>* solver;
-    CacheManager<string>* cm;
+    CacheManager<string,string>* cm;
     Matrix* createMatrix(deque<string> lines);
 public:
-    MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string> *cm) : solver(solver), cm(cm) {}
+    MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}
     void handleClient(int client_socket) override;
 };
 

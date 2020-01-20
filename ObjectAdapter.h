@@ -15,9 +15,10 @@
 using namespace std;
 
 class ObjectAdapter : public Solver<Matrix*, string> {
+    string updateBackTrace(vector<State<vector<int>>*> path);
 public:
     string solve(Matrix* problem) override;
-    string updateBackTrace(State<vector<int>>* s);
+    int costOfAll(vector<State<vector<int>>*> nodes);
 };
 
 

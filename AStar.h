@@ -11,7 +11,7 @@
 #include "Matrix.h"
 #include <deque>
 #include <string>
-
+using namespace std;
 template<class T>
 class AStar :public Searcher<T> {
     int nodesEvaluated=0;
@@ -40,12 +40,11 @@ public:
         openList.push_back(s->getInitialState());
         this->nodesEvaluated ++;
         while (openList.size() > 0) {
-            auto t = (min_element(openList.begin(), openList.end(), Compare()));
-//            State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
+            auto t = (min_element(openList.begin(), openList.end(), Compare(s->getGoalState)));
             State<T> *top = *t;
             openList.erase(t);
             closed.push_back(top);
-            if (top->getState() == s->getGoalNode()) {
+            if (s->isGoalState(top)) {
                 return {top};
             }
             vector<State<T>*> successors = s->getAllStates(top);
@@ -67,7 +66,7 @@ public:
                                        return ptr->getState() == successor->getState();
                                    });
 
-                if (itr != openList.end())  {
+                if (itr != openList.end()) {
                     (*itr)->setCost(min((*itr)->getCost(), top->getCost() + (*itr)->getCost()));
                 } else{
                     openList.push_back(successor);
@@ -76,6 +75,9 @@ public:
             }
         }
         return {};
+    }
+    int getNumberOfNodesEvaluated() override {
+        return this->nodesEvaluated;
     }
 };
 

@@ -6,7 +6,8 @@
 //template <typename T>;
 using namespace std;
 
-template <class T> class CacheManager {
+template <class T,class P>
+        class CacheManager {
 public:
     virtual void insert(string  key, T object) = 0;
     virtual T get(string key) = 0;
