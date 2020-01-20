@@ -60,11 +60,13 @@ CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o
  /home/adi/CLionProjects/OurServer/MyTestClientHandler.h
  /home/adi/CLionProjects/OurServer/Solver.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o
+ /home/adi/CLionProjects/OurServer/BestFS.h
  /home/adi/CLionProjects/OurServer/Cell.h
  /home/adi/CLionProjects/OurServer/Matrix.h
  /home/adi/CLionProjects/OurServer/ObjectAdapter.cpp
  /home/adi/CLionProjects/OurServer/ObjectAdapter.h
  /home/adi/CLionProjects/OurServer/Searchable.h
+ /home/adi/CLionProjects/OurServer/Searcher.h
  /home/adi/CLionProjects/OurServer/Solver.h
  /home/adi/CLionProjects/OurServer/State.h
 CMakeFiles/OurServer.dir/StringReverser.cpp.o
@@ -73,12 +75,18 @@ CMakeFiles/OurServer.dir/StringReverser.cpp.o
  /home/adi/CLionProjects/OurServer/StringReverser.h
 CMakeFiles/OurServer.dir/main.cpp.o
  /home/adi/CLionProjects/OurServer/CacheManager.h
+ /home/adi/CLionProjects/OurServer/Cell.h
  /home/adi/CLionProjects/OurServer/ClientHandler.h
  /home/adi/CLionProjects/OurServer/FileCacheManager.h
  /home/adi/CLionProjects/OurServer/Main.h
+ /home/adi/CLionProjects/OurServer/Matrix.h
+ /home/adi/CLionProjects/OurServer/MyClientHandler.h
  /home/adi/CLionProjects/OurServer/MySerialServer.h
  /home/adi/CLionProjects/OurServer/MyTestClientHandler.h
+ /home/adi/CLionProjects/OurServer/ObjectAdapter.h
+ /home/adi/CLionProjects/OurServer/Searchable.h
  /home/adi/CLionProjects/OurServer/Server.h
  /home/adi/CLionProjects/OurServer/Solver.h
+ /home/adi/CLionProjects/OurServer/State.h
  /home/adi/CLionProjects/OurServer/StringReverser.h
  /home/adi/CLionProjects/OurServer/main.cpp

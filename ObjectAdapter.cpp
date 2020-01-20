@@ -3,8 +3,12 @@
 //
 
 #include "ObjectAdapter.h"
+#include "BestFS.h"
 
 string ObjectAdapter::solve(Matrix* problem) {
+    Searcher<vector<int>>* s = new BestFS<vector<int>>();
+    vector<State<vector<int>>*> v =  s->search(problem);
+    updateBackTrace(v.back());
     // check all algorithm and choose the best one
     // get the vector<Cell*> solution from the search method in the chosen algorithm
     //return this->updateBackTrace(solution);

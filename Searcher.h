@@ -8,7 +8,7 @@
 
 template <class T> class Searcher {
 public:
-    virtual vector<State<T>*> Search(Searchable<T> s) = 0;
+    virtual vector<State<T>*> search(Searchable<T>* s) = 0;
     virtual int getNumberOfNodesEvaluated() = 0;
 };
 

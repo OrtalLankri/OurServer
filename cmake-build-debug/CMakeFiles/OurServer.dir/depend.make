@@ -59,11 +59,13 @@ CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../MyTestClientHandler.cpp
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../MyTestClientHandler.h
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../Solver.h
 
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../BestFS.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Cell.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Matrix.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.cpp
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Searchable.h
+CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Searcher.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../State.h
 
@@ -72,13 +74,19 @@ CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.cpp
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.h
 
 CMakeFiles/OurServer.dir/main.cpp.o: ../CacheManager.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../Cell.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../ClientHandler.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../FileCacheManager.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Main.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../Matrix.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../MyClientHandler.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../MySerialServer.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../MyTestClientHandler.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../ObjectAdapter.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Server.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Solver.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../State.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../StringReverser.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../main.cpp
 

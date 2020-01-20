@@ -10,6 +10,7 @@
 #include "Searchable.h"
 #include "Cell.h"
 #include <vector>
+#include <array>
 
 using namespace std;
 
@@ -17,19 +18,29 @@ class Matrix : public Searchable<vector<int>> {
     vector<vector<Cell*>> matrix;
     Cell* intialState;
     Cell* goalState;
-    vector<State<vector<int>>*> allStates;
+//    vector<State<vector<int>>*> allStates;
     int matrixSize;
 public:
     Matrix(int size) {
         this->matrixSize = size;
     }
-    void setStates(State<vector<int>>* initial, State<vector<int>>* goal) {
-        this->intialState = (Cell*) initial;
-        this->goalState = (Cell*) goal;
+    void setInitial(Cell *c) {
+        this->intialState = c;
+    }
+    void setGoal(Cell *c) {
+        this->goalState = c;
+    }
+//    void setStates(State<vector<int>>* initial, State<vector<int>>* goal) {
+//        this->intialState = (Cell*) initial;
+//        this->goalState = (Cell*) goal;
+//    }
+    void setMatrix(vector<vector<Cell*>> m) {
+        this->matrix = m;
     }
     int getSize() override {
         return this->matrixSize * this->matrixSize;
     }
+    State<vector<int>>* getGoalState() override;
     State<vector<int>>* getInitialState() override;
     bool isGoalState(State<vector<int>>* s) override;
     vector<State<vector<int>>*> getAllStates(State<vector<int>>* s) override;

@@ -10,6 +10,7 @@ using namespace std;
 class Cell : public State<vector<int>> {
     vector<int> state;
     double cost;
+    double tempCost;
     Cell* cameFrom;
 public:
     Cell(vector<int> state) {
@@ -23,6 +24,12 @@ public:
     }
     void setCost(double c) override {
         this->cost = c;
+    }
+    double getTempCost() override {
+        return this->tempCost;
+    }
+    void setTempCost(double c) override {
+        this->tempCost = c;
     }
     Cell* getCameFrom() override {
         return this->cameFrom;
