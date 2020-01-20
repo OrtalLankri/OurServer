@@ -8,11 +8,11 @@ void MyClientHandler::handleClient(int client_socket) {
 
     deque<string> lines;
 
-    lines.push_back("8,2,8,6,5");
-    lines.push_back("8,3 ,8, 6,-1");
-    lines.push_back(" 18,3 ,4, -1, -1");
-    lines.push_back("2, 13, 8, 4, -1");
-    lines.push_back(" 12 , 31 , 0 , 6 , 4 ");
+    lines.push_back("1,2,3,6,5");
+    lines.push_back("4,7 ,8, 9,-1");
+    lines.push_back(" 10,11 ,12, -1, -1");
+    lines.push_back("16, 15, 14, 13, -1");
+    lines.push_back(" 17 , 21 , 18 , 19 , 20 ");
     lines.push_back("0, 0");
     lines.push_back("4,4");
     /*

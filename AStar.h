@@ -69,6 +69,7 @@ public:
 
             for (State<T> *&successor : successors) {
                 successor->setCameFrom(top);
+                cout<<"ssson: " << successor->getCost()<< ", father: " << successor->getCameFrom()->getCost()<<endl;
                 successor->setTempCost(successor->getCost() + top->getTempCost());
 
 
@@ -84,6 +85,8 @@ public:
 
                 if (itr != openList.end()) {
                     (*itr)->setTempCost(min((*itr)->getTempCost(), top->getTempCost() + (*itr)->getCost()));
+                    cout<<"son: " << successor->getCost()<< ", father: " << successor->getCameFrom()->getCost()<<endl;
+
                 } else{
                     openList.push_back(successor);
                     this->nodesEvaluated++;
