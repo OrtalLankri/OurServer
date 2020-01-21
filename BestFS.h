@@ -52,7 +52,6 @@ public:
             if (s->isGoalState(top)) {
                 //path
 //                return updateBackTrace(top);
-                cout<<"end"<<endl;
                 return this->getPath(top);
             }
             vector<State<T>*> successors = s->getAllStates(top);
@@ -62,7 +61,7 @@ public:
             for (int i = 0; i < successors.size(); i++) {
                 this->nodesEvaluated++;
                 auto itOpen = find(openList.begin(),openList.end(),successors[i]);
-                auto itClosed=find(closed.begin(),closed.end(),successors[i]);
+                auto itClosed = find(closed.begin(),closed.end(),successors[i]);
                 // if successor is not in openList and not in closed list
                 if(itOpen == openList.end() && itClosed == closed.end()) {
                     openList.push_back(successors[i]);
@@ -71,14 +70,16 @@ public:
                 }
                 //if this new path is better than previous one
                 else if(successors[i]->getCost() + top->getTempCost() < successors[i]->getTempCost()) {
-                    // if successor is not in openList
-                    if(itOpen == openList.end()){
-                        cout<< "handle!!!" <<endl;
-                        openList.push_back(successors[i]);
-                    } else {
-                        successors[i]->setCameFrom(top);
-                        successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
-                    }
+                    successors[i]->setCameFrom(top);
+                    successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
+//                    // if successor is not in openList
+//                    if(itOpen == openList.end()){
+//                        cout<< "handle!!!" <<endl;
+//                        openList.push_back(successors[i]);
+//                    } else {
+//                        successors[i]->setCameFrom(top);
+//                        successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
+//                    }
                 }
             }
         }

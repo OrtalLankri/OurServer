@@ -37,7 +37,7 @@ public:
             // for each adjacent of v
             for (State<T>* adj : s->getAllStates(v)) {
                 // if adjacent has not been visited before
-                if (find(visited.begin(), visited.end(), adj) != visited.end()) {
+                if (find(visited.begin(), visited.end(), adj) == visited.end()) {
                     visited.push_back(adj);
                     openList.push(adj);
                     adj->setCameFrom(v);
