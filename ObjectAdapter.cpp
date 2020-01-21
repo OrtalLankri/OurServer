@@ -9,30 +9,34 @@
 #include "AStar.h"
 
 string ObjectAdapter::solve(Matrix* problem) {
+
     // check all algorithm and choose the best one
-//    Searcher<vector<int>>* bestFs = new BestFS<vector<int>>();
-//    vector<State<vector<int>>*> s1 = bestFs->search(problem);
-//    Searcher<vector<int>>* dfs = new DFS<vector<int>>();
-//    vector<State<vector<int>>*> s2 = dfs->search(problem);
-//    Searcher<vector<int>>* bfs = new BFS<vector<int>>();
-//    vector<State<vector<int>>*> s3 = bfs->search(problem);
-    Searcher<vector<int>>* astar = new AStar<vector<int>>();
-    vector<State<vector<int>>*> s4 = astar->search(problem);
+    Searcher<vector<int>>* bestFs = new BestFS<vector<int>>();
+    vector<State<vector<int>>*> s1 = bestFs->search(problem);
+    Searcher<vector<int>>* dfs = new DFS<vector<int>>();
+    vector<State<vector<int>>*> s2 = dfs->search(problem);
+    Searcher<vector<int>>* bfs = new BFS<vector<int>>();
+    vector<State<vector<int>>*> s3 = bfs->search(problem);
+//    Searcher<vector<int>>* astar = new AStar<vector<int>>();
+//    vector<State<vector<int>>*> s4 = astar->search(problem);
+    cout<<updateBackTrace(s1)<<endl;
+    cout<<updateBackTrace(s2)<<endl;
+    cout<<updateBackTrace(s3)<<endl;
+
     // get the vector<Cell*> solution from the search method in the chosen algorithm
-//    int sum1=costOfAll(s1);
-//    int sum2=costOfAll(s2);
-//    int sum3=costOfAll(s3);
-//    int sum4=costOfAll(s4);
-//    if(sum1<=sum2 && sum1<=sum3 && sum1<=sum4){
-//        return updateBackTrace(s1);
-//    } else if(sum2<=sum1 && sum2<=sum3 && sum2 <=sum4){
-//        return updateBackTrace(s2);
-//    } else if(sum3<=sum2 && sum3<=sum1 && sum3<=sum4){
-//        return updateBackTrace(s3);
-//    } else{
+    int sum1 = costOfAll(s1);
+    int sum2 = costOfAll(s1);
+    int sum3 = costOfAll(s1);
+    int sum4 = costOfAll(s1);
+    if(sum1<=sum2 && sum1<=sum3 && sum1<=sum4){
+        return updateBackTrace(s1);
+    } else if(sum2<=sum1 && sum2<=sum3 && sum2 <=sum4){
+        return updateBackTrace(s2);
+    } else if(sum3<=sum2 && sum3<=sum1 && sum3<=sum4){
+        return updateBackTrace(s3);
+    } else{
 //        return updateBackTrace(s4);
-    //}
-    cout<< updateBackTrace(s4)<<endl;
+    }
     //return this->updateBackTrace(solution);
 }
 int ObjectAdapter::costOfAll(vector<State<vector<int>>*> nodes){
@@ -65,8 +69,9 @@ string ObjectAdapter::updateBackTrace(vector<State<vector<int>>*> path) {
             trace += to_string(cost) + "), ";
         }
     }
-    //return the path]!
     return trace;
+}
+
 //    string trace = "";
 //    vector<State<vector<int>>*> path;
 //    //int cost = 0;
@@ -96,4 +101,3 @@ string ObjectAdapter::updateBackTrace(vector<State<vector<int>>*> path) {
 //    }
 //    //return the path]!
 //    return trace;
-}

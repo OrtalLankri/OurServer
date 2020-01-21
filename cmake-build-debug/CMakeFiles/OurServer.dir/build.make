@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/ortal/clion-2019.3/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ortal/CLionProjects/OurServer
+CMAKE_SOURCE_DIR = /home/adi/CLionProjects/OurServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ortal/CLionProjects/OurServer/cmake-build-debug
+CMAKE_BINARY_DIR = /home/adi/CLionProjects/OurServer/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/OurServer.dir/depend.make
@@ -59,185 +59,185 @@ include CMakeFiles/OurServer.dir/flags.make
 
 CMakeFiles/OurServer.dir/main.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OurServer.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/main.cpp.o -c /home/ortal/CLionProjects/OurServer/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/OurServer.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/main.cpp.o -c /home/adi/CLionProjects/OurServer/main.cpp
 
 CMakeFiles/OurServer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/main.cpp > CMakeFiles/OurServer.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/main.cpp > CMakeFiles/OurServer.dir/main.cpp.i
 
 CMakeFiles/OurServer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/main.cpp -o CMakeFiles/OurServer.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/main.cpp -o CMakeFiles/OurServer.dir/main.cpp.s
 
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../MySerialServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OurServer.dir/MySerialServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MySerialServer.cpp.o -c /home/ortal/CLionProjects/OurServer/MySerialServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OurServer.dir/MySerialServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MySerialServer.cpp.o -c /home/adi/CLionProjects/OurServer/MySerialServer.cpp
 
 CMakeFiles/OurServer.dir/MySerialServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/MySerialServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/MySerialServer.cpp > CMakeFiles/OurServer.dir/MySerialServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/MySerialServer.cpp > CMakeFiles/OurServer.dir/MySerialServer.cpp.i
 
 CMakeFiles/OurServer.dir/MySerialServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/MySerialServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/MySerialServer.cpp -o CMakeFiles/OurServer.dir/MySerialServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/MySerialServer.cpp -o CMakeFiles/OurServer.dir/MySerialServer.cpp.s
 
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o: ../MyTestClientHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o -c /home/ortal/CLionProjects/OurServer/MyTestClientHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.o -c /home/adi/CLionProjects/OurServer/MyTestClientHandler.cpp
 
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/MyTestClientHandler.cpp > CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/MyTestClientHandler.cpp > CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.i
 
 CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/MyTestClientHandler.cpp -o CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/MyTestClientHandler.cpp -o CMakeFiles/OurServer.dir/MyTestClientHandler.cpp.s
 
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OurServer.dir/StringReverser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/StringReverser.cpp.o -c /home/ortal/CLionProjects/OurServer/StringReverser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OurServer.dir/StringReverser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/StringReverser.cpp.o -c /home/adi/CLionProjects/OurServer/StringReverser.cpp
 
 CMakeFiles/OurServer.dir/StringReverser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/StringReverser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/StringReverser.cpp > CMakeFiles/OurServer.dir/StringReverser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/StringReverser.cpp > CMakeFiles/OurServer.dir/StringReverser.cpp.i
 
 CMakeFiles/OurServer.dir/StringReverser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/StringReverser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/StringReverser.cpp -o CMakeFiles/OurServer.dir/StringReverser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/StringReverser.cpp -o CMakeFiles/OurServer.dir/StringReverser.cpp.s
 
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.o: ../FileCacheManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OurServer.dir/FileCacheManager.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/FileCacheManager.cpp.o -c /home/ortal/CLionProjects/OurServer/FileCacheManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OurServer.dir/FileCacheManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/FileCacheManager.cpp.o -c /home/adi/CLionProjects/OurServer/FileCacheManager.cpp
 
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/FileCacheManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/FileCacheManager.cpp > CMakeFiles/OurServer.dir/FileCacheManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/FileCacheManager.cpp > CMakeFiles/OurServer.dir/FileCacheManager.cpp.i
 
 CMakeFiles/OurServer.dir/FileCacheManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/FileCacheManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/FileCacheManager.cpp -o CMakeFiles/OurServer.dir/FileCacheManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/FileCacheManager.cpp -o CMakeFiles/OurServer.dir/FileCacheManager.cpp.s
 
 CMakeFiles/OurServer.dir/BFS.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/BFS.cpp.o: ../BFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OurServer.dir/BFS.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/BFS.cpp.o -c /home/ortal/CLionProjects/OurServer/BFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OurServer.dir/BFS.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/BFS.cpp.o -c /home/adi/CLionProjects/OurServer/BFS.cpp
 
 CMakeFiles/OurServer.dir/BFS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/BFS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/BFS.cpp > CMakeFiles/OurServer.dir/BFS.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/BFS.cpp > CMakeFiles/OurServer.dir/BFS.cpp.i
 
 CMakeFiles/OurServer.dir/BFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/BFS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/BFS.cpp -o CMakeFiles/OurServer.dir/BFS.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/BFS.cpp -o CMakeFiles/OurServer.dir/BFS.cpp.s
 
 CMakeFiles/OurServer.dir/DFS.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/DFS.cpp.o: ../DFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OurServer.dir/DFS.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/DFS.cpp.o -c /home/ortal/CLionProjects/OurServer/DFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OurServer.dir/DFS.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/DFS.cpp.o -c /home/adi/CLionProjects/OurServer/DFS.cpp
 
 CMakeFiles/OurServer.dir/DFS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/DFS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/DFS.cpp > CMakeFiles/OurServer.dir/DFS.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/DFS.cpp > CMakeFiles/OurServer.dir/DFS.cpp.i
 
 CMakeFiles/OurServer.dir/DFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/DFS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/DFS.cpp -o CMakeFiles/OurServer.dir/DFS.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/DFS.cpp -o CMakeFiles/OurServer.dir/DFS.cpp.s
 
 CMakeFiles/OurServer.dir/BestFS.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/BestFS.cpp.o: ../BestFS.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OurServer.dir/BestFS.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/BestFS.cpp.o -c /home/ortal/CLionProjects/OurServer/BestFS.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OurServer.dir/BestFS.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/BestFS.cpp.o -c /home/adi/CLionProjects/OurServer/BestFS.cpp
 
 CMakeFiles/OurServer.dir/BestFS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/BestFS.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/BestFS.cpp > CMakeFiles/OurServer.dir/BestFS.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/BestFS.cpp > CMakeFiles/OurServer.dir/BestFS.cpp.i
 
 CMakeFiles/OurServer.dir/BestFS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/BestFS.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/BestFS.cpp -o CMakeFiles/OurServer.dir/BestFS.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/BestFS.cpp -o CMakeFiles/OurServer.dir/BestFS.cpp.s
 
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o: ../ObjectAdapter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o -c /home/ortal/CLionProjects/OurServer/ObjectAdapter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/ObjectAdapter.cpp.o -c /home/adi/CLionProjects/OurServer/ObjectAdapter.cpp
 
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/ObjectAdapter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/ObjectAdapter.cpp > CMakeFiles/OurServer.dir/ObjectAdapter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/ObjectAdapter.cpp > CMakeFiles/OurServer.dir/ObjectAdapter.cpp.i
 
 CMakeFiles/OurServer.dir/ObjectAdapter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/ObjectAdapter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/ObjectAdapter.cpp -o CMakeFiles/OurServer.dir/ObjectAdapter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/ObjectAdapter.cpp -o CMakeFiles/OurServer.dir/ObjectAdapter.cpp.s
 
 CMakeFiles/OurServer.dir/AStar.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/AStar.cpp.o: ../AStar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/OurServer.dir/AStar.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/AStar.cpp.o -c /home/ortal/CLionProjects/OurServer/AStar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/OurServer.dir/AStar.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/AStar.cpp.o -c /home/adi/CLionProjects/OurServer/AStar.cpp
 
 CMakeFiles/OurServer.dir/AStar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/AStar.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/AStar.cpp > CMakeFiles/OurServer.dir/AStar.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/AStar.cpp > CMakeFiles/OurServer.dir/AStar.cpp.i
 
 CMakeFiles/OurServer.dir/AStar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/AStar.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/AStar.cpp -o CMakeFiles/OurServer.dir/AStar.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/AStar.cpp -o CMakeFiles/OurServer.dir/AStar.cpp.s
 
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../MyClientHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/OurServer.dir/MyClientHandler.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MyClientHandler.cpp.o -c /home/ortal/CLionProjects/OurServer/MyClientHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/OurServer.dir/MyClientHandler.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MyClientHandler.cpp.o -c /home/adi/CLionProjects/OurServer/MyClientHandler.cpp
 
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/MyClientHandler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/MyClientHandler.cpp > CMakeFiles/OurServer.dir/MyClientHandler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/MyClientHandler.cpp > CMakeFiles/OurServer.dir/MyClientHandler.cpp.i
 
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/MyClientHandler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/MyClientHandler.cpp -o CMakeFiles/OurServer.dir/MyClientHandler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/MyClientHandler.cpp -o CMakeFiles/OurServer.dir/MyClientHandler.cpp.s
 
 CMakeFiles/OurServer.dir/Matrix.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/Matrix.cpp.o: ../Matrix.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/OurServer.dir/Matrix.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/Matrix.cpp.o -c /home/ortal/CLionProjects/OurServer/Matrix.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/OurServer.dir/Matrix.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/Matrix.cpp.o -c /home/adi/CLionProjects/OurServer/Matrix.cpp
 
 CMakeFiles/OurServer.dir/Matrix.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/Matrix.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/Matrix.cpp > CMakeFiles/OurServer.dir/Matrix.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/Matrix.cpp > CMakeFiles/OurServer.dir/Matrix.cpp.i
 
 CMakeFiles/OurServer.dir/Matrix.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/Matrix.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/Matrix.cpp -o CMakeFiles/OurServer.dir/Matrix.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/Matrix.cpp -o CMakeFiles/OurServer.dir/Matrix.cpp.s
 
 CMakeFiles/OurServer.dir/Cell.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/Cell.cpp.o: ../Cell.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/OurServer.dir/Cell.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/Cell.cpp.o -c /home/ortal/CLionProjects/OurServer/Cell.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/OurServer.dir/Cell.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/Cell.cpp.o -c /home/adi/CLionProjects/OurServer/Cell.cpp
 
 CMakeFiles/OurServer.dir/Cell.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/Cell.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/Cell.cpp > CMakeFiles/OurServer.dir/Cell.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/Cell.cpp > CMakeFiles/OurServer.dir/Cell.cpp.i
 
 CMakeFiles/OurServer.dir/Cell.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/Cell.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/Cell.cpp -o CMakeFiles/OurServer.dir/Cell.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/Cell.cpp -o CMakeFiles/OurServer.dir/Cell.cpp.s
 
 CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: CMakeFiles/OurServer.dir/flags.make
 CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../MyParallelServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/OurServer.dir/MyParallelServer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MyParallelServer.cpp.o -c /home/ortal/CLionProjects/OurServer/MyParallelServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/OurServer.dir/MyParallelServer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OurServer.dir/MyParallelServer.cpp.o -c /home/adi/CLionProjects/OurServer/MyParallelServer.cpp
 
 CMakeFiles/OurServer.dir/MyParallelServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OurServer.dir/MyParallelServer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ortal/CLionProjects/OurServer/MyParallelServer.cpp > CMakeFiles/OurServer.dir/MyParallelServer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/adi/CLionProjects/OurServer/MyParallelServer.cpp > CMakeFiles/OurServer.dir/MyParallelServer.cpp.i
 
 CMakeFiles/OurServer.dir/MyParallelServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OurServer.dir/MyParallelServer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ortal/CLionProjects/OurServer/MyParallelServer.cpp -o CMakeFiles/OurServer.dir/MyParallelServer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/adi/CLionProjects/OurServer/MyParallelServer.cpp -o CMakeFiles/OurServer.dir/MyParallelServer.cpp.s
 
 # Object files for target OurServer
 OurServer_OBJECTS = \
@@ -275,7 +275,7 @@ OurServer: CMakeFiles/OurServer.dir/Cell.cpp.o
 OurServer: CMakeFiles/OurServer.dir/MyParallelServer.cpp.o
 OurServer: CMakeFiles/OurServer.dir/build.make
 OurServer: CMakeFiles/OurServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable OurServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable OurServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OurServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -288,6 +288,6 @@ CMakeFiles/OurServer.dir/clean:
 .PHONY : CMakeFiles/OurServer.dir/clean
 
 CMakeFiles/OurServer.dir/depend:
-	cd /home/ortal/CLionProjects/OurServer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ortal/CLionProjects/OurServer /home/ortal/CLionProjects/OurServer /home/ortal/CLionProjects/OurServer/cmake-build-debug /home/ortal/CLionProjects/OurServer/cmake-build-debug /home/ortal/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/OurServer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/adi/CLionProjects/OurServer/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/adi/CLionProjects/OurServer /home/adi/CLionProjects/OurServer /home/adi/CLionProjects/OurServer/cmake-build-debug /home/adi/CLionProjects/OurServer/cmake-build-debug /home/adi/CLionProjects/OurServer/cmake-build-debug/CMakeFiles/OurServer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/OurServer.dir/depend
 

@@ -11,12 +11,13 @@
 extern bool time_out;
 
 void MySerialServer::stop(){
-    time_out = true;
+    close(this->socketfdp);
+//    time_out = true;
 }
 
 void MySerialServer::open(int port, ClientHandler* c) {
     // create thread
-     thread *t = new thread(&MySerialServer::readFromClient, port, c);
+     thread *t = new thread(&MySerialServer::readFromClient, port, c, &this->socketfdp);
      t->detach();
 
 }
@@ -25,10 +26,10 @@ void MySerialServer::open(int port, ClientHandler* c) {
  * @param client_socket the socket
  * @param socketfd the socketfd
  */
-void MySerialServer::readFromClient(int port,ClientHandler* c) {
-    while (!time_out) {
+void MySerialServer::readFromClient(int port,ClientHandler* c, int* socketfdp) {
         // create socket
         int socketfd = socket(AF_INET, SOCK_STREAM, 0);
+        *socketfdp = socketfd;
         // if creation failed
         if (socketfd == -1) {
             cerr << "Could not create a socket" << endl;
@@ -39,6 +40,11 @@ void MySerialServer::readFromClient(int port,ClientHandler* c) {
         address.sin_family = AF_INET;
         address.sin_addr.s_addr = INADDR_ANY;
         address.sin_port = htons(port);
+        // time out
+        struct timeval tv;
+        tv.tv_sec = 120;
+        setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char*)&tv, sizeof(tv));
+        //bind
         if (bind(socketfd, (struct sockaddr *) &address, sizeof(address)) == -1) {
             cerr << "Could not bind the socket to an IP" << endl;
             return;
@@ -50,6 +56,7 @@ void MySerialServer::readFromClient(int port,ClientHandler* c) {
         } else {
             cout << "Server is now listening ..." << endl;
         }
+    while (true) {
         // accepting a client
         int client_socket = accept(socketfd, (struct sockaddr *) &address, (socklen_t *) &address);
         // if acceptance failed
@@ -59,6 +66,5 @@ void MySerialServer::readFromClient(int port,ClientHandler* c) {
         }
         cout << "Server is now connected" << endl;
         c->handleClient(client_socket);
-        close(socketfd);
     }
 }

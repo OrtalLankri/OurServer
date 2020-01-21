@@ -55,8 +55,9 @@ public:
         string name = "_" + key;
         //ofstream outFile(name, ios::binary|ios::out);
         FILE* outFile= fopen(name.c_str(), "w");
+        char* objc = (char*) obj.c_str();
         if (outFile!= nullptr) {
-            fprintf(outFile,obj.c_str());
+            fprintf(outFile, objc);
             //outFile.write((char *) &obj, sizeof(obj));
             fclose(outFile);
         }

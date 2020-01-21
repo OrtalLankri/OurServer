@@ -5,47 +5,46 @@
 #include "MyClientHandler.h"
 
 void MyClientHandler::handleClient(int client_socket) {
-
+/*
     deque<string> lines;
 
-    lines.push_back("1,2,3,6,5");
-    lines.push_back("4,7 ,8, 9,-1");
-    lines.push_back(" 10,11 ,12, -1, -1");
-    lines.push_back("16, 15, 14, 13, -1");
-    lines.push_back(" 17 , 21 , 18 , 19 , 20 ");
+    lines.push_back("1,2,3,4,5");
+    lines.push_back("6,7 ,8, 9,9");
+    lines.push_back(" 13,12 ,11, 10, -1");
+    lines.push_back("14, 15, 16, 17, -1");
+    lines.push_back(" -1 , 18 , 19 , 20 , 100");
     lines.push_back("0, 0");
     lines.push_back("4,4");
-    /*
-   lines.push_back("1,2,18");
-   lines.push_back("19,3 ,17");
-   lines.push_back(" 20,4 ,5");
-   lines.push_back("0, 0");
-   lines.push_back("2,2");
-     */
     Matrix *matrix = this->createMatrix(lines);
     this->solver->solve(matrix);
+    */
 
-//
-//    int valRead = 0;
-//    while (valRead != -1){
-//        char line[100000] = {0};
-//        valRead = read(client_socket, line, 100000);
-//        deque<string> lines;
-//        string key = "";
-//        while(line != "end") {
-//            lines.push_back(line);
-//            key += line;
-//        }
-//        string solution;
-//        if (this->cm->inCache(key)){
-//            solution = this->cm->get(key);
-//        } else {
-//            Matrix* matrix = this->createMatrix(lines);
-//            solution = this->solver->solve(matrix);
-//            this->cm->insert(key, solution);
-//        }
-//        send(client_socket, solution.c_str(), strlen(solution.c_str()),0);
-//    }
+    int valRead = 0;
+    while (true){
+        char line[100000] = {0};
+        valRead = read(client_socket, line, 100000);
+        if (valRead < 0) {
+            cout<< "Error reading" <<endl;
+            break;
+        }
+        deque<string> lines;
+        string key = "";
+        while(strcmp(line, "end")) {
+            lines.push_back(line);
+            key += line;
+        }
+        string solution;
+        if (this->cm->inCache(key)){
+            solution = this->cm->get(key);
+        } else {
+            Matrix* matrix = this->createMatrix(lines);
+            solution = this->solver->solve(matrix);
+            this->cm->insert(key, solution);
+        }
+        int sent = send(client_socket, solution.c_str(), strlen(solution.c_str()),0);
+        if (sent == -1) {
+            cout<< "Error sending" <<endl;
+        }    }
 }
 
 Matrix *MyClientHandler::createMatrix(deque<string> lines) {

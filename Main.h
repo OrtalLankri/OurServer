@@ -20,6 +20,8 @@
 #include "ObjectAdapter.h"
 #include "MyClientHandler.h"
 
+extern bool time_out;
+
 using namespace server_side;
 using namespace std;
 
@@ -31,18 +33,17 @@ namespace boot {
             Server* server = new MySerialServer();
             int capacity = 10;
             CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
-//            int port = atoi(argv[1]);
-//            server->open(port, ch);
-//            this_thread::sleep_for(chrono::milliseconds(120000));
-            //CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
-//            Solver<string, string>* solver = new StringReverser();
-//            ClientHandler* ch = new MyTestClientHandler(solver, cm);
             Solver<Matrix*, string>* solver = new ObjectAdapter();
             ClientHandler* ch = new MyClientHandler(solver, cm);
-            ch->handleClient(8);
-//            int port = atoi(argv[1]);
-//            server->open(port, ch);
-//            this_thread::sleep_for(chrono::milliseconds(120000));
+//            ch->handleClient(8);
+
+//            Solver<string, string>* solver = new StringReverser();
+//            ClientHandler* ch = new MyTestClientHandler(solver, cm);
+            int port = atoi(argv[1]);
+            server->open(port, ch);
+            server->stop();
+            this_thread::sleep_for(chrono::milliseconds(12000));
+            time_out = true;
             return 0;
         }
     };

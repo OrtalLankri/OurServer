@@ -55,7 +55,8 @@ public:
                 return this->getPath(top);
             }
             vector<State<T>*> successors = s->getAllStates(top);
-//            if(successors.size()==0){
+//            if(successors.size()==0) {
+//                openList.push_back(top->getCameFrom());
 //                continue;
 //            }
             for (int i = 0; i < successors.size(); i++) {
