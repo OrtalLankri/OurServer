@@ -52,18 +52,63 @@ class AStar :public Searcher<T> {
     }
 public:
     vector<State<T>*> search(Searchable<T>* s) override {
-        vector<State<T> *> openList;
-        vector<State<T> *> closed;
+        vector<State<T>*> openList;
+        vector<State<T>*> closed;
         openList.push_back(s->getInitialState());
-        this->nodesEvaluated ++;
+        this->nodesEvaluated = 1;
         while (openList.size() > 0) {
             auto t = (min_element(openList.begin(), openList.end(), Compare(s->getGoalState())));
             State<T> *top = *t;
             openList.erase(t);
             closed.push_back(top);
+            //
+            if (s->isGoalState(top)) {
+                //path
+                return this->getPath(top);
+            }
+            vector<State<T>*> successors = s->getAllStates(top);
+            for (int i = 0; i < successors.size(); i++) {
+                this->nodesEvaluated++;
+                auto itOpen = find(openList.begin(),openList.end(),successors[i]);
+                auto itClosed=find(closed.begin(),closed.end(),successors[i]);
+                // if successor is not in openList and not in closed list
+                if(itOpen == openList.end() && itClosed == closed.end()) {
+                    openList.push_back(successors[i]);
+                    successors[i]->setCameFrom(top);
+                    successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
+                }
+                    //if this new path is better than previous one
+                else if(successors[i]->getCost() + top->getTempCost() < successors[i]->getTempCost()) {
+                    // if successor is not in openList
+                    if(itOpen == openList.end()){
+                        cout<< "handle!!!" <<endl;
+                        openList.push_back(successors[i]);
+                    } else {
+                        successors[i]->setCameFrom(top);
+                        successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+    vector<State<T>*> search(Searchable<T>* s) override {
+        vector<State<T> *> openList;
+        vector<State<T> *> closed;
+        vector<State<T>*> path;
+        openList.push_back(s->getInitialState());
+        this->nodesEvaluated ++;
+        while (openList.size() > 0) {
+            auto t = (min_element(openList.begin(), openList.end(), Compare(s->getGoalState())));
+            State<T> *top = *t;
+            path.push_back(top);
+            openList.erase(t);
+            closed.push_back(top);
             if (s->isGoalState(top)) {
                 cout<<"end";
-                return getPath(top);
+//                return getPath(top);
+                return path;
             }
             vector<State<T>*> successors = s->getAllStates(top);
 
@@ -71,7 +116,6 @@ public:
                 successor->setCameFrom(top);
                 cout<<"ssson: " << successor->getCost()<< ", father: " << successor->getCameFrom()->getCost()<<endl;
                 successor->setTempCost(successor->getCost() + top->getTempCost());
-
 
                 if (find_if(closed.begin(), closed.end(),[successor](decltype(*begin(closed)) ptr )  {
                                 return ptr->getState() == successor->getState();
@@ -95,6 +139,7 @@ public:
         }
         return {};
     }
+     */
     int getNumberOfNodesEvaluated() override {
         return this->nodesEvaluated;
     }
