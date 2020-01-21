@@ -35,14 +35,14 @@ namespace boot {
             CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
             Solver<Matrix*, string>* solver = new ObjectAdapter();
             ClientHandler* ch = new MyClientHandler(solver, cm);
-//            ch->handleClient(8);
+            ch->handleClient(8);
 
 //            Solver<string, string>* solver = new StringReverser();
 //            ClientHandler* ch = new MyTestClientHandler(solver, cm);
             int port = atoi(argv[1]);
-            server->open(port, ch);
-            server->stop();
-            this_thread::sleep_for(chrono::milliseconds(12000));
+//            server->open(port, ch);
+//            server->stop();
+//            this_thread::sleep_for(chrono::milliseconds(12000));
             time_out = true;
             return 0;
         }

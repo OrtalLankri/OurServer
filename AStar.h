@@ -79,14 +79,8 @@ public:
                 }
                     //if this new path is better than previous one
                 else if(successors[i]->getCost() + top->getTempCost() < successors[i]->getTempCost()) {
-                    // if successor is not in openList
-                    if(itOpen == openList.end()){
-                        cout<< "handle!!!" <<endl;
-                        openList.push_back(successors[i]);
-                    } else {
-                        successors[i]->setCameFrom(top);
-                        successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
-                    }
+                    successors[i]->setCameFrom(top);
+                    successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
                 }
             }
         }

@@ -5,20 +5,18 @@
 #include "MyClientHandler.h"
 
 void MyClientHandler::handleClient(int client_socket) {
-/*
-    deque<string> lines;
 
+    deque<string> lines;
     lines.push_back("1,2,3,4,5");
-    lines.push_back("6,7 ,8, 9,9");
+    lines.push_back("6,7 ,-1, 9,99");
     lines.push_back(" 13,12 ,11, 10, -1");
-    lines.push_back("14, 15, 16, 17, -1");
-    lines.push_back(" -1 , 18 , 19 , 20 , 100");
+    lines.push_back("-1, 15, 16, 17, 170");
+    lines.push_back(" 8 , 18 , 19 , 20 , 100");
     lines.push_back("0, 0");
     lines.push_back("4,4");
     Matrix *matrix = this->createMatrix(lines);
     this->solver->solve(matrix);
-    */
-
+/*
     int valRead = 0;
     while (true){
         char line[100000] = {0};
@@ -45,6 +43,7 @@ void MyClientHandler::handleClient(int client_socket) {
         if (sent == -1) {
             cout<< "Error sending" <<endl;
         }    }
+        */
 }
 
 Matrix *MyClientHandler::createMatrix(deque<string> lines) {
