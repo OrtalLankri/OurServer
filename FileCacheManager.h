@@ -52,9 +52,8 @@ public:
         }
         // write (or update) the object to the file system
 //        string name = T::class_name + "_" + key;
-        string name = "_" + key;
         //ofstream outFile(name, ios::binary|ios::out);
-        FILE* outFile= fopen(name.c_str(), "w");
+        FILE* outFile= fopen(key.c_str(), "w");
         char* objc = (char*) obj.c_str();
         if (outFile!= nullptr) {
             fprintf(outFile, objc);
@@ -76,9 +75,8 @@ public:
         else {
             // check if the object exist in the file system
 //            string name = T::class_name + "_" + key;
-            string name = "_" + key;
             //fstream inFile(name, ios::in);
-            FILE* file = fopen(name.c_str(), "r");
+            FILE* file = fopen(key.c_str(), "r");
             if (file != nullptr) {
                 //T obj;
                 char* obj;

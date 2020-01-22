@@ -13,11 +13,13 @@
 #include <vector>
 #include <deque>
 #include "Matrix.h"
+#include <mutex>
 
 class MyClientHandler: public ClientHandler {
     Solver<Matrix*,string>* solver;
     CacheManager<string,string>* cm;
-    Matrix* createMatrix(deque<string> lines);
+    Matrix* createMatrix(vector<string> lines);
+    mutex mtx;
 public:
     MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}
     void handleClient(int client_socket) override;

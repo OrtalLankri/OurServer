@@ -6,8 +6,15 @@
 #define OURSERVER_MYPARALLELSERVER_H
 
 
-class MyParallelServer {
+#include "Server.h"
+using namespace server_side;
 
+class MyParallelServer :public Server{
+    int socketfdp;
+public:
+    static void readFromClient(int port,ClientHandler* c, int* socketfdp);
+    void open(int port, ClientHandler* c) override;
+    void stop() override;
 };
 
 

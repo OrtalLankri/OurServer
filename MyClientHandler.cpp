@@ -3,9 +3,38 @@
 //
 
 #include "MyClientHandler.h"
-
+using namespace std;
 void MyClientHandler::handleClient(int client_socket) {
+    int valRead = 0;
+    string  key = "";
+    vector<string> lines;
+    while (valRead != -1) {
+        char buffer[1024] = {0};
+        valRead = read(client_socket, buffer, 1024);
+        string s = buffer;
+        key += s.substr(0,valRead);
+        cout<<s<<"\n";
+        lines.push_back(s);
+        if(!s.find("end")){
+            break;
+        }
+    }
+    cout<< "end loop\n";
+    string solution;
+    if (this->cm->inCache(key)){
+        solution = this->cm->get(key);
+    } else {
+        Matrix* matrix = this->createMatrix(lines);
+        solution = this->solver->solve(matrix);
+        this->cm->insert(key, solution);
+    }
+    int sent = send(client_socket, solution.c_str(), strlen(solution.c_str()),0);
+    if (sent == -1) {
+        cout<< "Error sending" <<endl;
+    }
+}
 
+/*
     deque<string> lines;
     lines.push_back("1,2,3,4,5");
     lines.push_back("6,7 ,-1, 9,99");
@@ -16,37 +45,10 @@ void MyClientHandler::handleClient(int client_socket) {
     lines.push_back("4,4");
     Matrix *matrix = this->createMatrix(lines);
     this->solver->solve(matrix);
-/*
-    int valRead = 0;
-    while (true){
-        char line[100000] = {0};
-        valRead = read(client_socket, line, 100000);
-        if (valRead < 0) {
-            cout<< "Error reading" <<endl;
-            break;
-        }
-        deque<string> lines;
-        string key = "";
-        while(strcmp(line, "end")) {
-            lines.push_back(line);
-            key += line;
-        }
-        string solution;
-        if (this->cm->inCache(key)){
-            solution = this->cm->get(key);
-        } else {
-            Matrix* matrix = this->createMatrix(lines);
-            solution = this->solver->solve(matrix);
-            this->cm->insert(key, solution);
-        }
-        int sent = send(client_socket, solution.c_str(), strlen(solution.c_str()),0);
-        if (sent == -1) {
-            cout<< "Error sending" <<endl;
-        }    }
-        */
-}
+*/
 
-Matrix *MyClientHandler::createMatrix(deque<string> lines) {
+
+Matrix *MyClientHandler::createMatrix(vector<string> lines) {
     // goal
     string goal = lines.back();
     lines.pop_back();

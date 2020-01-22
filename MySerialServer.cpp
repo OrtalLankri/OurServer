@@ -19,7 +19,7 @@ void MySerialServer::open(int port, ClientHandler* c) {
     // create thread
      thread *t = new thread(&MySerialServer::readFromClient, port, c, &this->socketfdp);
      t->detach();
-
+//    MySerialServer::readFromClient(port, c, &socketfdp);
 }
 /**
  * the function reads the data from the simulator and updates the xml map
