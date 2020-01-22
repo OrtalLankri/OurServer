@@ -36,12 +36,13 @@ public:
                 return p;
             }
             // for each adjacent of v
-            for (State<T>* adj : s->getAllStates(v)) {
+            vector<State<T>*> successors = s->getAllStates(v);
+            for (State<T>* adj : successors) {
                 // if adjacent has not been visited before
                 if (find(visited.begin(), visited.end(), adj) == visited.end()) {
                     visited.push_back(adj);
                     openList.push(adj);
-                    adj->setCameFrom(v);
+//                    adj->setCameFrom(v);
                     this->nodesEvaluated++;
                     // add path
                     vector<State<T>*> p = paths[v];

@@ -29,7 +29,6 @@ namespace boot {
     class Main {
     public:
         int main(int argc, char *argv[]) {
-            cout<<"main Hello, World!"<<endl;
             Server* server = new MySerialServer();
             int capacity = 10;
             CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
@@ -41,9 +40,9 @@ namespace boot {
 //            ClientHandler* ch = new MyTestClientHandler(solver, cm);
             int port = atoi(argv[1]);
             server->open(port, ch);
-            server->stop();
             this_thread::sleep_for(chrono::milliseconds(12000));
-            time_out = true;
+            server->stop();
+//            time_out = true;
             return 0;
         }
     };

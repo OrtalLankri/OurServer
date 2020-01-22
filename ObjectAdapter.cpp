@@ -19,25 +19,28 @@ string ObjectAdapter::solve(Matrix *problem) {
     vector<State<vector<int>> *> s3 = bfs->search(problem);
     Searcher<vector<int>>* astar = new AStar<vector<int>>();
     vector<State<vector<int>>*> s4 = astar->search(problem);
-    cout << updateBackTrace(s1) << endl;
-    cout << updateBackTrace(s2) << endl;
-    cout << updateBackTrace(s3) << endl;
-    cout << updateBackTrace(s4) << endl;
+    string a1 = updateBackTrace(s1);
+    string a2 = updateBackTrace(s2);
+    string a3 = updateBackTrace(s3);
+    string a4 = updateBackTrace(s4);
+    cout << a1 << endl;
+    cout << a2 << endl;
+    cout << a3 << endl;
+    cout << a4 << endl;
     // get the vector<Cell*> solution from the search method in the chosen algorithm
     int sum1 = costOfAll(s1);
-    int sum2 = costOfAll(s1);
-    int sum3 = costOfAll(s1);
-    int sum4 = costOfAll(s1);
+    int sum2 = costOfAll(s2);
+    int sum3 = costOfAll(s3);
+    int sum4 = costOfAll(s4);
     if (sum1 <= sum2 && sum1 <= sum3 && sum1 <= sum4) {
-        return updateBackTrace(s1);
+        return a1;
     } else if (sum2 <= sum1 && sum2 <= sum3 && sum2 <= sum4) {
-        return updateBackTrace(s2);
+        return a2;
     } else if (sum3 <= sum2 && sum3 <= sum1 && sum3 <= sum4) {
-        return updateBackTrace(s3);
+        return a3;
     } else {
-//        return updateBackTrace(s4);
+        return a4;
     }
-    //return this->updateBackTrace(solution);
 }
 
 int ObjectAdapter::costOfAll(vector<State<vector<int>> *> nodes) {

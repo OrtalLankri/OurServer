@@ -6,21 +6,28 @@
 using namespace std;
 void MyClientHandler::handleClient(int client_socket) {
     int valRead = 0;
-    string  key = "";
-    vector<string> lines;
+    string  data = "";
     while (valRead != -1) {
         char buffer[1024] = {0};
         valRead = read(client_socket, buffer, 1024);
         string s = buffer;
-        key += s.substr(0,valRead);
-        cout<<s<<"\n";
-        lines.push_back(s);
+        s = s.substr(0,valRead);
+        data += s + "\n";
         if(!s.find("end")){
             break;
         }
     }
-    cout<< "end loop\n";
-    string solution;
+    deque<string> lines;
+    char *line = strtok(strdup(data.c_str()), "\n");
+    while(line != nullptr){
+        lines.push_back(line);
+        line = strtok(NULL, "\n");
+    }
+    hash<string> key_hash;
+    string key = to_string(key_hash(data));
+    // remove "end"
+    lines.pop_back();
+    string solution = "";
     if (this->cm->inCache(key)){
         solution = this->cm->get(key);
     } else {
@@ -48,7 +55,7 @@ void MyClientHandler::handleClient(int client_socket) {
 */
 
 
-Matrix *MyClientHandler::createMatrix(vector<string> lines) {
+Matrix *MyClientHandler::createMatrix(deque<string> lines) {
     // goal
     string goal = lines.back();
     lines.pop_back();

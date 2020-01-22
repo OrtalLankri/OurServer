@@ -51,8 +51,12 @@ CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Searchable.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/MyClientHandler.cpp.o: ../State.h
 
+CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../CacheManager.h
+CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../ClientHandler.h
 CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../MyParallelServer.cpp
 CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../MyParallelServer.h
+CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../Server.h
+CMakeFiles/OurServer.dir/MyParallelServer.cpp.o: ../Solver.h
 
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../CacheManager.h
 CMakeFiles/OurServer.dir/MySerialServer.cpp.o: ../ClientHandler.h

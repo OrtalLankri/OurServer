@@ -18,7 +18,7 @@
 class MyClientHandler: public ClientHandler {
     Solver<Matrix*,string>* solver;
     CacheManager<string,string>* cm;
-    Matrix* createMatrix(vector<string> lines);
+    Matrix* createMatrix(deque<string> lines);
     mutex mtx;
 public:
     MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}

@@ -4,7 +4,6 @@
 
 #include <unistd.h>
 #include <thread>
-#include <bits/socket.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include "MyParallelServer.h"

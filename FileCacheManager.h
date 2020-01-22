@@ -52,13 +52,15 @@ public:
         }
         // write (or update) the object to the file system
 //        string name = T::class_name + "_" + key;
-        //ofstream outFile(name, ios::binary|ios::out);
-        FILE* outFile= fopen(key.c_str(), "w");
+        ofstream outFile;
+        key += ".txt";
+        outFile.open(key);
+//        FILE* outFile = fopen(key.c_str(), "w");
         char* objc = (char*) obj.c_str();
-        if (outFile!= nullptr) {
-            fprintf(outFile, objc);
+        if (outFile.is_open()) {
+            outFile << (objc) << "\n";
             //outFile.write((char *) &obj, sizeof(obj));
-            fclose(outFile);
+            outFile.close();
         }
         else {
             throw "Error";
@@ -75,14 +77,17 @@ public:
         else {
             // check if the object exist in the file system
 //            string name = T::class_name + "_" + key;
-            //fstream inFile(name, ios::in);
-            FILE* file = fopen(key.c_str(), "r");
-            if (file != nullptr) {
+            ifstream inFile;
+            key += ".txt";
+            inFile.open(key);
+//            FILE* file = fopen(key.c_str(), "r");
+            if (inFile.is_open()) {
                 //T obj;
-                char* obj;
-                fscanf(file,obj);
+                string obj;
+                getline(inFile, obj);
+//                fscanf(file,obj);
                 //inFile.read((char *) &obj, sizeof(obj));
-                fclose(file);
+                inFile.close();
                 // update the object to be the most recently used in the cache
                 deleteLru();
                 cacheList.push_front({key, obj});
