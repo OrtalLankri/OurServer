@@ -44,6 +44,7 @@ public:
     State<vector<int>>* getInitialState() override;
     bool isGoalState(State<vector<int>>* s) override;
     vector<State<vector<int>>*> getAllStates(State<vector<int>>* s) override;
+    void initialTempCosts() override;
 };
 
 

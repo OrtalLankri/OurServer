@@ -31,9 +31,8 @@ class AStar :public Searcher<T> {
         }
 
         bool operator()(State<T> *left, State<T> *right) {
-            return left->getCost() + distance(left->getState(),
-                    this->goal->getState()) < right->getCost() + distance(right->getState(),
-                            this->goal->getState());
+            return left->getTempCost() + distance(left->getState(),this->goal->getState())
+                < right->getTempCost() + distance(right->getState(),this->goal->getState());
         }
     };
     vector<State<T>*> getPath(State<T>* goal) {
@@ -54,9 +53,12 @@ public:
     vector<State<T>*> search(Searchable<T>* s) override {
         vector<State<T>*> openList;
         vector<State<T>*> closed;
+        s->initialTempCosts();
         openList.push_back(s->getInitialState());
         this->nodesEvaluated = 1;
         while (openList.size() > 0) {
+            this->nodesEvaluated++;
+
             auto t = (min_element(openList.begin(), openList.end(), Compare(s->getGoalState())));
             State<T> *top = *t;
             openList.erase(t);
@@ -68,7 +70,6 @@ public:
             }
             vector<State<T>*> successors = s->getAllStates(top);
             for (int i = 0; i < successors.size(); i++) {
-                this->nodesEvaluated++;
                 auto itOpen = find(openList.begin(),openList.end(),successors[i]);
                 auto itClosed=find(closed.begin(),closed.end(),successors[i]);
                 // if successor is not in openList and not in closed list

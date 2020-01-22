@@ -19,6 +19,7 @@
 #include "Matrix.h"
 #include "ObjectAdapter.h"
 #include "MyClientHandler.h"
+#include "MyParallelServer.h"
 
 extern bool time_out;
 

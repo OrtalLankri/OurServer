@@ -88,11 +88,9 @@ Matrix *MyClientHandler::createMatrix(deque<string> lines) {
             state.push_back(j);
             Cell *cell = new Cell(state);
             cell->setCost(atoi(cost));
-            cell->setTempCost(100000);
             column.push_back(cell);
             // if its's initial state
             if (atoi(initialI) == i && atoi(initialJ) == j) {
-                cell->setTempCost(atoi(cost));
                 cell->setCameFrom(nullptr);
                 matrix->setInitial(cell);
             }

@@ -96,6 +96,7 @@ CMakeFiles/OurServer.dir/main.cpp.o
  /home/adi/CLionProjects/OurServer/Main.h
  /home/adi/CLionProjects/OurServer/Matrix.h
  /home/adi/CLionProjects/OurServer/MyClientHandler.h
+ /home/adi/CLionProjects/OurServer/MyParallelServer.h
  /home/adi/CLionProjects/OurServer/MySerialServer.h
  /home/adi/CLionProjects/OurServer/MyTestClientHandler.h
  /home/adi/CLionProjects/OurServer/ObjectAdapter.h

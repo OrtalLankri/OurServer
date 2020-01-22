@@ -23,10 +23,10 @@ string ObjectAdapter::solve(Matrix *problem) {
     string a2 = updateBackTrace(s2);
     string a3 = updateBackTrace(s3);
     string a4 = updateBackTrace(s4);
-    cout << a1 << endl;
-    cout << a2 << endl;
-    cout << a3 << endl;
-    cout << a4 << endl;
+    cout << a1 << "\n bestFS num of nodes: " << bestFs->getNumberOfNodesEvaluated() << endl;
+    cout << a2 << "\n DFS num of nodes: " << dfs->getNumberOfNodesEvaluated() << endl;
+    cout << a3 << "\n BFS num of nodes: " << bfs->getNumberOfNodesEvaluated() << endl;
+    cout << a4 << "\n Astar num of nodes: " << astar->getNumberOfNodesEvaluated() << endl;
     // get the vector<Cell*> solution from the search method in the chosen algorithm
     int sum1 = costOfAll(s1);
     int sum2 = costOfAll(s2);

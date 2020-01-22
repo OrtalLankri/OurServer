@@ -17,7 +17,7 @@ bool Matrix::isGoalState(State<vector<int>> *s) {
 }
 
 vector<State<vector<int>> *> Matrix::getAllStates(State<vector<int>> *s) {
-    vector<State<vector<int>> *> allStates;
+    vector<State<vector<int>>*> allStates;
     int i = s->getState()[0];
     int j = s->getState()[1];
     // left
@@ -28,13 +28,25 @@ vector<State<vector<int>> *> Matrix::getAllStates(State<vector<int>> *s) {
     if (j != 0 && matrix[i][j - 1]->getCost() != -1) {
         allStates.push_back(matrix[i][j - 1]);
     }
-    // right
-    if (i != this->matrixSize - 1 && matrix[i + 1][j]->getCost() != -1) {
-        allStates.push_back(matrix[i + 1][j]);
-    }
     // down
     if (j != this->matrixSize - 1 && matrix[i][j + 1]->getCost() != -1) {
         allStates.push_back(matrix[i][j + 1]);
     }
+    // right
+    if (i != this->matrixSize - 1 && matrix[i + 1][j]->getCost() != -1) {
+        allStates.push_back(matrix[i + 1][j]);
+    }
     return allStates;
 }
+
+void Matrix::initialTempCosts() {
+    for (vector<Cell*> row : this->matrix) {
+        for (Cell* cell : row) {
+            cell->setTempCost(10000);
+        }
+    }
+    // set the initial to its cost
+    double initial_cost = this->matrix[0][0]->getCost();
+    this->matrix[0][0]->setTempCost(initial_cost);
+}
+

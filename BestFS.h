@@ -40,13 +40,22 @@ public:
     vector<State<T>*> search(Searchable<T>* s) override {
         vector<State<T>*> openList;
         vector<State<T>*> closed;
+        s->initialTempCosts();
         openList.push_back(s->getInitialState());
         this->nodesEvaluated = 1;
         while (openList.size() > 0) {
-            auto t = (min_element(openList.begin(), openList.end(), Compare()));
+            this->nodesEvaluated++;
+
+//            cout << "num " << this->nodesEvaluated<<endl;
+            auto it = (min_element(openList.begin(), openList.end(), Compare()));
 //            State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
-            State<T> *top = *t;
-            openList.erase(t);
+            State<T> *top = *it;
+            openList.erase(it);
+//            cout<<"top: "<<top->getCost()<<"- ";
+//            for (State<T> *t : openList) {
+//                cout<< t->getCost() << " ";
+//            }
+//            cout<<endl;
             closed.push_back(top);
             //
             if (s->isGoalState(top)) {
@@ -60,19 +69,23 @@ public:
 //                continue;
 //            }
             for (int i = 0; i < successors.size(); i++) {
-                this->nodesEvaluated++;
-                auto itOpen = find(openList.begin(),openList.end(),successors[i]);
-                auto itClosed = find(closed.begin(),closed.end(),successors[i]);
+                auto itOpen = find(openList.begin(), openList.end(), successors[i]);
+                auto itClosed = find(closed.begin(), closed.end(), successors[i]);
                 // if successor is not in openList and not in closed list
-                if(itOpen == openList.end() && itClosed == closed.end()) {
+                if (itOpen == openList.end() && itClosed == closed.end()) {
                     openList.push_back(successors[i]);
                     successors[i]->setCameFrom(top);
                     successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
                 }
                 //if this new path is better than previous one
                 else if(successors[i]->getCost() + top->getTempCost() < successors[i]->getTempCost()) {
+//                    cout << "num " << this->nodesEvaluated<<endl;
+                    if(itOpen == openList.end()){
+                        openList.push_back(successors[i]);
+                    }
                     successors[i]->setCameFrom(top);
                     successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
+
 //                    // if successor is not in openList
 //                    if(itOpen == openList.end()){
 //                        cout<< "handle!!!" <<endl;
@@ -82,6 +95,8 @@ public:
 //                        successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
 //                    }
                 }
+//                cout<< successors[i]->getCost() + top->getTempCost() <<" " << successors[i]->getTempCost()<<endl;
+
             }
         }
     }
