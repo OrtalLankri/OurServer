@@ -71,3 +71,8 @@ string ObjectAdapter::updateBackTrace(vector<State<vector<int>> *> path) {
     }
     return trace;
 }
+
+ObjectAdapter* ObjectAdapter::clone(){
+    return new ObjectAdapter();
+};
+
