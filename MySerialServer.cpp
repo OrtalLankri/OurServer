@@ -6,15 +6,9 @@ void MySerialServer::stop() {
 }
 
 void MySerialServer::open(int port, ClientHandler *c) {
-    // create thread
-    thread *t = new thread(&MySerialServer::readFromClient, port, c, &this->socketfdp);
-    t->detach();
-}
-
-void MySerialServer::readFromClient(int port, ClientHandler *c, int *socketfdp) {
     // create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
-    *socketfdp = socketfd;
+    this->socketfdp = socketfd;
     // if creation failed
     if (socketfd == -1) {
         cerr << "Could not create a socket" << endl;

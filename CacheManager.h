@@ -12,6 +12,7 @@ public:
     virtual void insert(string  key, T object) = 0;
     virtual T get(string key) = 0;
     virtual bool inCache(string key) = 0;
+    virtual ~CacheManager(){};
 
 };
 

@@ -19,7 +19,7 @@ class MyClientHandler: public ClientHandler {
     CacheManager<string,string>* cm;
     Matrix* createMatrix(deque<string> lines);
 public:
-    MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}
+    MyClientHandler(Solver<Matrix*, string> *slvr, CacheManager<string,string> *cacheManager) : solver(slvr), cm(cacheManager) {}
     void handleClient(int client_socket) override;
     MyClientHandler* clone() override;
 };

@@ -1,8 +1,4 @@
 
-#include <unistd.h>
-#include <thread>
-#include <sys/socket.h>
-#include <netinet/in.h>
 #include "MyParallelServer.h"
 
 void MyParallelServer::stop(){
@@ -10,15 +6,9 @@ void MyParallelServer::stop(){
 }
 
 void MyParallelServer::open(int port, ClientHandler* c) {
-    // create thread
-    thread *t = new thread(&MyParallelServer::readFromClient, port, c, &this->socketfdp);
-    t->detach();
-}
-
-void MyParallelServer::readFromClient(int port,ClientHandler* c, int* socketfdp) {
     // create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
-    *socketfdp = socketfd;
+    this->socketfdp = socketfd;
     // if creation failed
     if (socketfd == -1) {
         cerr << "Could not create a socket" << endl;
@@ -54,6 +44,12 @@ void MyParallelServer::readFromClient(int port,ClientHandler* c, int* socketfdp)
             return;
         }
         cout << "Server is now connected" << endl;
-        c->handleClient(client_socket);
+        ClientHandler* chClone = c->clone();
+        thread *t = new thread(&MyParallelServer::clientThread, chClone, socketfd);
+        t->detach();
     }
+}
+
+void MyParallelServer::clientThread(ClientHandler* c, int client_socket) {
+    c->handleClient(client_socket);
 }

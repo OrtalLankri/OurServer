@@ -25,9 +25,9 @@ void MyClientHandler::handleClient(int client_socket) {
     // remove "end"
     lines.pop_back();
     string solution = "";
-    if (this->cm->inCache(key)){
-        solution = this->cm->get(key);
-    } else {
+    solution = this->cm->get(key);
+    // if the solution does not exist in files
+    if (solution == "") {
         Matrix* matrix = this->createMatrix(lines);
         solution = this->solver->solve(matrix);
         this->cm->insert(key, solution);

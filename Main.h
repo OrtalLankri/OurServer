@@ -25,14 +25,18 @@ namespace boot {
     class Main {
     public:
         int main(int argc, char *argv[]) {
-            Server* server = new MyParallelServer();
+//            Server* server = new MyParallelServer();
+            Server* server = new MySerialServer();
             int capacity = 10;
             CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
             Solver<Matrix*, string>* solver = new ObjectAdapter();
             ClientHandler* ch = new MyClientHandler(solver, cm);
-            int port = atoi(argv[1]);
+            int port = 5600;
+            if (argc > 1) {
+                port = atoi(argv[1]);
+            }
             server->open(port, ch);
-            this_thread::sleep_for(chrono::milliseconds(12000));
+//            this_thread::sleep_for(chrono::milliseconds(12000));
             server->stop();
             return 0;
         }

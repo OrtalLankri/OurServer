@@ -10,6 +10,7 @@ template <class T> class Searcher {
 public:
     virtual vector<State<T>*> search(Searchable<T>* s) = 0;
     virtual int getNumberOfNodesEvaluated() = 0;
+    virtual ~Searcher(){}
 };
 
 #endif //OURSERVER_SEARCHER_H

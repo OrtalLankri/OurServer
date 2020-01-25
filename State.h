@@ -12,6 +12,7 @@ public:
     virtual State<T>* getCameFrom() = 0;
     virtual void setCameFrom(State<T>* state) = 0;
     virtual bool equals(State<T>* s) = 0;
+    virtual ~State() {}
 };
 
 #endif //OURSERVER_STATE_H

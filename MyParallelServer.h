@@ -7,13 +7,13 @@
 #include <thread>
 #include <vector>
 #include <unistd.h>
+#include <sys/socket.h>
 
 using namespace server_side;
 
 class MyParallelServer :public Server{
     int socketfdp;
 public:
-    static void readFromClient(int port,ClientHandler* c, int* socketfdp);
     static void clientThread(ClientHandler* c, int client_socket);
         void open(int port, ClientHandler* c) override;
     void stop() override;

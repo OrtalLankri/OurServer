@@ -13,8 +13,8 @@ class Cell : public State<vector<int>> {
     double tempCost;
     Cell* cameFrom;
 public:
-    Cell(vector<int> state) {
-        this->state = state;
+    Cell(vector<int> s) {
+        this->state = s;
     }
     vector<int> getState() override {
         return this->state;

@@ -15,6 +15,7 @@ public:
     virtual vector<State<T>*> getAllStates(State<T>* s) = 0;
     virtual int getSize() = 0;
     virtual void initialTempCosts() = 0;
+    virtual ~Searchable() {}
 };
 
 #endif //OURSERVER_SEARCHABLE_H

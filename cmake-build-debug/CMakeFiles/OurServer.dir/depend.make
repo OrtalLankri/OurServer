@@ -88,9 +88,13 @@ CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.cpp
 CMakeFiles/OurServer.dir/StringReverser.cpp.o: ../StringReverser.h
 
+CMakeFiles/OurServer.dir/main.cpp.o: ../AStar.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../BFS.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../BestFS.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../CacheManager.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Cell.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../ClientHandler.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../DFS.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../FileCacheManager.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Main.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Matrix.h
@@ -100,6 +104,7 @@ CMakeFiles/OurServer.dir/main.cpp.o: ../MySerialServer.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../MyTestClientHandler.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../ObjectAdapter.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Searchable.h
+CMakeFiles/OurServer.dir/main.cpp.o: ../Searcher.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Server.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../Solver.h
 CMakeFiles/OurServer.dir/main.cpp.o: ../State.h

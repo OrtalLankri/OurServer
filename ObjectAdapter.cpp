@@ -2,7 +2,11 @@
 #include "ObjectAdapter.h"
 
 string ObjectAdapter::solve(Matrix *problem) {
-
+    // use winning algorithm
+    Searcher<vector<int>> *bestFs = new BestFS<vector<int>>();
+    vector<State<vector<int>> *> s = bestFs->search(problem);
+    return updateBackTrace(s);
+    /*
     // check all algorithm and choose the best one
     Searcher<vector<int>> *bestFs = new BestFS<vector<int>>();
     vector<State<vector<int>> *> s1 = bestFs->search(problem);
@@ -34,11 +38,12 @@ string ObjectAdapter::solve(Matrix *problem) {
     } else {
         return a4;
     }
+     */
 }
 
 int ObjectAdapter::costOfAll(vector<State<vector<int>> *> nodes) {
-    int sum;
-    for (int i = 0; i < nodes.size(); i++) {
+    int sum, size = nodes.size();
+    for (int i = 0; i < size; i++) {
         sum += nodes[i]->getCost();
     }
     return sum;
@@ -47,9 +52,8 @@ int ObjectAdapter::costOfAll(vector<State<vector<int>> *> nodes) {
 string ObjectAdapter::updateBackTrace(vector<State<vector<int>> *> path) {
     string trace = "";
     int cost = path[0]->getCost();
-//    for (State<vector<int>>* cell : path) {
-//        State<vector<int>>* father = cell->getCameFrom();
-    for (int i = 1; i < path.size(); i++) {
+    int size = path.size();
+    for (int i = 1; i < size; i++) {
         cost += path[i]->getCost();
         int x1 = path[i]->getState()[0];
         int y1 = path[i]->getState()[1];
@@ -65,7 +69,8 @@ string ObjectAdapter::updateBackTrace(vector<State<vector<int>> *> path) {
             trace += "Down (";
         }
         trace += to_string(cost) + ")";
-        if (i < path.size() -1) {
+        // if it's not the last one
+        if (i < size -1) {
             trace += ", ";
         }
     }
@@ -74,5 +79,5 @@ string ObjectAdapter::updateBackTrace(vector<State<vector<int>> *> path) {
 
 ObjectAdapter* ObjectAdapter::clone(){
     return new ObjectAdapter();
-};
+}
 

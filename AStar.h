@@ -22,9 +22,9 @@ class AStar :public Searcher<T> {
             this->goal=g;
         }
         using Point = std::vector<int>;
-        double distance(Point cur, Point goal){
-            int x = abs(cur[0] - goal[0]);
-            int y = abs(cur[1] - goal[1]);
+        double distance(Point cur, Point pGoal){
+            int x = abs(cur[0] - pGoal[0]);
+            int y = abs(cur[1] - pGoal[1]);
             return x+y;
         }
 
@@ -64,7 +64,8 @@ public:
                 return this->getPath(top);
             }
             vector<State<T>*> successors = s->getAllStates(top);
-            for (int i = 0; i < successors.size(); i++) {
+            int size = successors.size();
+            for (int i = 0; i < size; i++) {
                 auto itOpen = find(openList.begin(),openList.end(),successors[i]);
                 auto itClosed=find(closed.begin(),closed.end(),successors[i]);
                 // if successor is not in openList and not in closed list
@@ -83,6 +84,7 @@ public:
                 }
             }
         }
+        return {};
     }
     int getNumberOfNodesEvaluated() override {
         return this->nodesEvaluated;

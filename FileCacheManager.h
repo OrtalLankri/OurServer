@@ -6,6 +6,7 @@
 #include <list>
 #include <functional>
 #include <fstream>
+#include <iostream>
 #include "CacheManager.h"
 
 using namespace std;
@@ -22,6 +23,9 @@ template <class T> class FileCacheManager : public CacheManager<string,string>{
         cache.find(key)->second = cacheList.begin();
     }
     void deleteLru() {
+        if (cache.size() < capacity) {
+            return;
+        }
         // delete the least recently used object from the cache
         auto lru = cacheList.end();
         --lru;
@@ -87,7 +91,7 @@ public:
                 cache[key] = itr;
                 return obj;
             }
-            throw "Error: Object does not exist";
+            return "";
         }
     }
     void foreach(const function<void(T&)> func){

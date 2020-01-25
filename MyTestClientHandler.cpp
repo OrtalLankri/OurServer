@@ -2,7 +2,6 @@
 #include "MyTestClientHandler.h"
 
 void MyTestClientHandler::handleClient(int client_socket) {
-    cout<< "testClientHandler" <<endl;
     int valRead = 0;
     while (true){
         char line[100000] = {0};
