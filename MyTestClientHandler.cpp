@@ -1,12 +1,5 @@
-//
-// Created by ortal on 12/01/2020.
-//
 
 #include "MyTestClientHandler.h"
-#include <unistd.h>
-#include <cstring>
-#include <sys/socket.h>
-using namespace std;
 
 void MyTestClientHandler::handleClient(int client_socket) {
     cout<< "testClientHandler" <<endl;

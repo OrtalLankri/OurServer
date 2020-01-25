@@ -1,6 +1,3 @@
-//
-// Created by ortal on 14/01/2020.
-//
 
 #ifndef OURSERVER_OBJECTADAPTER_H
 #define OURSERVER_OBJECTADAPTER_H
@@ -9,6 +6,10 @@
 #include "State.h"
 #include "Cell.h"
 #include "Matrix.h"
+#include "BestFS.h"
+#include "BFS.h"
+#include "DFS.h"
+#include "AStar.h"
 #include <string>
 #include <vector>
 
@@ -20,6 +21,5 @@ public:
     string solve(Matrix* problem) override;
     int costOfAll(vector<State<vector<int>>*> nodes);
 };
-
 
 #endif //OURSERVER_OBJECTADAPTER_H

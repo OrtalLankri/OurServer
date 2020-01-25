@@ -1,6 +1,7 @@
 
 #ifndef OURSERVER_CLIENTHANDLER_H
 #define OURSERVER_CLIENTHANDLER_H
+
 #include <iostream>
 #include <fstream>
 #include "Solver.h"
@@ -12,4 +13,5 @@ class ClientHandler {
 public:
     virtual void handleClient(int client_socket) = 0;
 };
+
 #endif //OURSERVER_CLIENTHANDLER_H

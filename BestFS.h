@@ -45,29 +45,14 @@ public:
         this->nodesEvaluated = 1;
         while (openList.size() > 0) {
             this->nodesEvaluated++;
-
-//            cout << "num " << this->nodesEvaluated<<endl;
             auto it = (min_element(openList.begin(), openList.end(), Compare()));
-//            State<T> *top = *(min_element(openList.begin(), openList.end(), Compare()));
             State<T> *top = *it;
             openList.erase(it);
-//            cout<<"top: "<<top->getCost()<<"- ";
-//            for (State<T> *t : openList) {
-//                cout<< t->getCost() << " ";
-//            }
-//            cout<<endl;
             closed.push_back(top);
-            //
             if (s->isGoalState(top)) {
-                //path
-//                return updateBackTrace(top);
                 return this->getPath(top);
             }
             vector<State<T>*> successors = s->getAllStates(top);
-//            if(successors.size()==0) {
-//                openList.push_back(top->getCameFrom());
-//                continue;
-//            }
             for (int i = 0; i < successors.size(); i++) {
                 auto itOpen = find(openList.begin(), openList.end(), successors[i]);
                 auto itClosed = find(closed.begin(), closed.end(), successors[i]);
@@ -79,24 +64,12 @@ public:
                 }
                 //if this new path is better than previous one
                 else if(successors[i]->getCost() + top->getTempCost() < successors[i]->getTempCost()) {
-//                    cout << "num " << this->nodesEvaluated<<endl;
                     if(itOpen == openList.end()){
                         openList.push_back(successors[i]);
                     }
                     successors[i]->setCameFrom(top);
                     successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
-
-//                    // if successor is not in openList
-//                    if(itOpen == openList.end()){
-//                        cout<< "handle!!!" <<endl;
-//                        openList.push_back(successors[i]);
-//                    } else {
-//                        successors[i]->setCameFrom(top);
-//                        successors[i]->setTempCost(successors[i]->getCost() + top->getTempCost());
-//                    }
                 }
-//                cout<< successors[i]->getCost() + top->getTempCost() <<" " << successors[i]->getTempCost()<<endl;
-
             }
         }
     }
@@ -104,6 +77,5 @@ public:
         return this->nodesEvaluated;
     }
 };
-
 
 #endif //OURSERVER_BESTFS_H

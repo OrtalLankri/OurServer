@@ -1,6 +1,3 @@
-//
-// Created by ortal on 14/01/2020.
-//
 
 #include "Matrix.h"
 
@@ -49,4 +46,3 @@ void Matrix::initialTempCosts() {
     double initial_cost = this->matrix[0][0]->getCost();
     this->matrix[0][0]->setTempCost(initial_cost);
 }
-

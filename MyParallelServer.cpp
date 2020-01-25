@@ -1,30 +1,20 @@
-//
-// Created by ortal on 20/01/2020.
-//
 
 #include <unistd.h>
 #include <thread>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include "MyParallelServer.h"
-extern bool time_out;
 
 void MyParallelServer::stop(){
     close(this->socketfdp);
-//    time_out = true;
 }
 
 void MyParallelServer::open(int port, ClientHandler* c) {
     // create thread
     thread *t = new thread(&MyParallelServer::readFromClient, port, c, &this->socketfdp);
     t->detach();
-//    MySerialServer::readFromClient(port, c, &socketfdp);
 }
-/**
- * the function reads the data from the simulator and updates the xml map
- * @param client_socket the socket
- * @param socketfd the socketfd
- */
+
 void MyParallelServer::readFromClient(int port,ClientHandler* c, int* socketfdp) {
     // create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);

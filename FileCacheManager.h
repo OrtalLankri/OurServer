@@ -51,15 +51,12 @@ public:
             cache[key] = itr;
         }
         // write (or update) the object to the file system
-//        string name = T::class_name + "_" + key;
         ofstream outFile;
         key += ".txt";
         outFile.open(key);
-//        FILE* outFile = fopen(key.c_str(), "w");
         char* objc = (char*) obj.c_str();
         if (outFile.is_open()) {
             outFile << (objc) << "\n";
-            //outFile.write((char *) &obj, sizeof(obj));
             outFile.close();
         }
         else {
@@ -76,17 +73,12 @@ public:
         }
         else {
             // check if the object exist in the file system
-//            string name = T::class_name + "_" + key;
             ifstream inFile;
             key += ".txt";
             inFile.open(key);
-//            FILE* file = fopen(key.c_str(), "r");
             if (inFile.is_open()) {
-                //T obj;
                 string obj;
                 getline(inFile, obj);
-//                fscanf(file,obj);
-                //inFile.read((char *) &obj, sizeof(obj));
                 inFile.close();
                 // update the object to be the most recently used in the cache
                 deleteLru();

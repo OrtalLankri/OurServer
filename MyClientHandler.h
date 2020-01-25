@@ -1,6 +1,3 @@
-//
-// Created by ortal on 14/01/2020.
-//
 
 #ifndef OURSERVER_MYCLIENTHANDLER_H
 #define OURSERVER_MYCLIENTHANDLER_H
@@ -15,15 +12,15 @@
 #include "Matrix.h"
 #include <mutex>
 
+using namespace std;
+
 class MyClientHandler: public ClientHandler {
     Solver<Matrix*,string>* solver;
     CacheManager<string,string>* cm;
     Matrix* createMatrix(deque<string> lines);
-    mutex mtx;
 public:
     MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}
     void handleClient(int client_socket) override;
 };
-
 
 #endif //OURSERVER_MYCLIENTHANDLER_H

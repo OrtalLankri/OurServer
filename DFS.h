@@ -42,7 +42,6 @@ public:
                 if (find(visited.begin(), visited.end(), adj) == visited.end()) {
                     visited.push_back(adj);
                     openList.push(adj);
-//                    adj->setCameFrom(v);
                     this->nodesEvaluated++;
                     // add path
                     vector<State<T>*> p = paths[v];
@@ -58,24 +57,3 @@ public:
 };
 
 #endif //OURSERVER_DFS_H
-
-
-//    S search(Searchable<T>* s) {
-//        int V = s->getSize();
-//        bool visited[V];
-//        for (int i = 0; i < V; i++) {
-//            visited[i] = false;
-//        }
-//        return Dfs(s, s->getInitialState(), visited);
-//    }
-
-//    S Dfs(Searchable<T>* s, State<T>* v, bool visited[]) {
-//        visited[v] = true;
-//        // mark
-//        vector<State<T>*> adj = s->getAllStates(v);
-//        for (State<T>* state : adj) {
-//            if (!visited[state]) {
-//                Dfs(state, visited);
-//            }
-//        }
-//    }

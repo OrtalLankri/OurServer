@@ -1,10 +1,6 @@
-//
-// Created by ortal on 14/01/2020.
-//
 
 #ifndef OURSERVER_MATRIX_H
 #define OURSERVER_MATRIX_H
-
 
 #include <string>
 #include "Searchable.h"
@@ -18,7 +14,6 @@ class Matrix : public Searchable<vector<int>> {
     vector<vector<Cell*>> matrix;
     Cell* intialState;
     Cell* goalState;
-//    vector<State<vector<int>>*> allStates;
     int matrixSize;
 public:
     Matrix(int size) {
@@ -30,10 +25,6 @@ public:
     void setGoal(Cell *c) {
         this->goalState = c;
     }
-//    void setStates(State<vector<int>>* initial, State<vector<int>>* goal) {
-//        this->intialState = (Cell*) initial;
-//        this->goalState = (Cell*) goal;
-//    }
     void setMatrix(vector<vector<Cell*>> m) {
         this->matrix = m;
     }
@@ -46,6 +37,5 @@ public:
     vector<State<vector<int>>*> getAllStates(State<vector<int>>* s) override;
     void initialTempCosts() override;
 };
-
 
 #endif //OURSERVER_MATRIX_H
