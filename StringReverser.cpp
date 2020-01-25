@@ -5,3 +5,7 @@ string StringReverser::solve (string problem) {
     reverse(problem.begin(),problem.end());
     return problem;
 }
+
+StringReverser* StringReverser::clone() {
+    return new StringReverser();
+}

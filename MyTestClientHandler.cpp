@@ -29,3 +29,8 @@ void MyTestClientHandler::handleClient(int client_socket) {
     }
 }
 
+MyTestClientHandler* MyTestClientHandler::clone(){
+    return new MyTestClientHandler(this->solver->clone(), this->cm);
+}
+
+

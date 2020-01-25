@@ -25,7 +25,7 @@ namespace boot {
     class Main {
     public:
         int main(int argc, char *argv[]) {
-            Server* server = new MySerialServer();
+            Server* server = new MyParallelServer();
             int capacity = 10;
             CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
             Solver<Matrix*, string>* solver = new ObjectAdapter();

@@ -81,3 +81,7 @@ Matrix *MyClientHandler::createMatrix(deque<string> lines) {
     matrix->setMatrix(rows);
     return matrix;
 }
+
+MyClientHandler* MyClientHandler::clone(){
+    return new MyClientHandler(this->solver->clone(), this->cm);
+}

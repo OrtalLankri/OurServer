@@ -14,7 +14,8 @@ class MyParallelServer :public Server{
     int socketfdp;
 public:
     static void readFromClient(int port,ClientHandler* c, int* socketfdp);
-    void open(int port, ClientHandler* c) override;
+    static void clientThread(ClientHandler* c, int client_socket);
+        void open(int port, ClientHandler* c) override;
     void stop() override;
 };
 

@@ -17,6 +17,7 @@ class MyTestClientHandler: public ClientHandler {
 public:
     MyTestClientHandler(Solver<string, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}
     void handleClient(int client_socket) override;
+    MyTestClientHandler* clone() override;
 };
 
 #endif //OURSERVER_MYTESTCLIENTHANDLER_H

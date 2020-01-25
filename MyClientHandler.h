@@ -21,6 +21,7 @@ class MyClientHandler: public ClientHandler {
 public:
     MyClientHandler(Solver<Matrix*, string> *solver, CacheManager<string,string> *cm) : solver(solver), cm(cm) {}
     void handleClient(int client_socket) override;
+    MyClientHandler* clone() override;
 };
 
 #endif //OURSERVER_MYCLIENTHANDLER_H

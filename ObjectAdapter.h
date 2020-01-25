@@ -20,6 +20,7 @@ class ObjectAdapter : public Solver<Matrix*, string> {
 public:
     string solve(Matrix* problem) override;
     int costOfAll(vector<State<vector<int>>*> nodes);
+    ObjectAdapter* clone() override;
 };
 
 #endif //OURSERVER_OBJECTADAPTER_H

@@ -11,6 +11,7 @@ using namespace std;
 class StringReverser : public Solver<string, string>{
 public:
     string solve(string problem);
+    StringReverser* clone() override;
 };
 
 #endif //OURSERVER_STRINGSOLVER_H
