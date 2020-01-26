@@ -19,10 +19,6 @@ void MySerialServer::open(int port, ClientHandler *c) {
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(port);
-    // time out
-    struct timeval tv;
-    tv.tv_sec = 120;
-    setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof(tv));
     //bind
     if (bind(socketfd, (struct sockaddr *) &address, sizeof(address)) == -1) {
         cerr << "Could not bind the socket to an IP" << endl;
@@ -35,15 +31,29 @@ void MySerialServer::open(int port, ClientHandler *c) {
     } else {
         cout << "Server is now listening ..." << endl;
     }
-    while (true) {
+    int connect = 1;
+    while (connect) {
+        // time out
+        fd_set rfds;
+        FD_ZERO(&rfds);
+        FD_SET(socketfd, &rfds);
+        struct timeval tv;
+        tv.tv_sec = 10;
+        setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof(tv));
+        connect = select(socketfd + 1, &rfds, (fd_set *) 0, (fd_set *) 0, &tv);
+        if (connect < 0) {
+            connect = 0;
+            break;
+        }
         // accepting a client
         int client_socket = accept(socketfd, (struct sockaddr *) &address, (socklen_t *) &address);
         // if acceptance failed
         if (client_socket == -1) {
-            cerr << "Error accepting client" << endl;
-            return;
+            connect = 0;
+            break;
         }
         cout << "Server is now connected" << endl;
         c->handleClient(client_socket);
     }
+    stop();
 }

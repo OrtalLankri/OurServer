@@ -13,6 +13,7 @@ using namespace server_side;
 
 class MyParallelServer :public Server{
     int socketfdp;
+    vector<thread*> threads;
 public:
     static void clientThread(ClientHandler* c, int client_socket);
         void open(int port, ClientHandler* c) override;
