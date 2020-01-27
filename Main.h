@@ -25,7 +25,6 @@ namespace boot {
     class Main {
     public:
         int main(int argc, char *argv[]) {
-            Server* server = new MyParallelServer();
             int capacity = 10;
             CacheManager<string,string>* cm = new FileCacheManager<string>(capacity);
             Solver<Matrix*, string>* solver = new ObjectAdapter();
@@ -34,9 +33,8 @@ namespace boot {
             if (argc > 1) {
                 port = atoi(argv[1]);
             }
+            Server* server = new MyParallelServer();
             server->open(port, ch);
-//            this_thread::sleep_for(chrono::milliseconds(12000));
-            server->stop();
             return 0;
         }
     };

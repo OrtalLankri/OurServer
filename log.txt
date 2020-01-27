@@ -1,0 +1,387 @@
+commit 46b516055d147a8327f140dd95f2d5ad9d764f02
+Author: OrtalLankri <AZsx1998>
+Date:   Sun Jan 26 18:18:49 2020 +0200
+
+    commit
+
+commit 694f6438d62b3a73c1f3292a8da792fb686c6893
+Merge: 5a71138 40da648
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Sat Jan 25 23:43:42 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5a71138579f90d904036728eb72acc6247f73be3
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Sat Jan 25 23:43:25 2020 +0200
+
+    final
+
+commit 40da64858c71eeea851feb9d817166beb6d0a441
+Author: Adi <58945534+adiM3344@users.noreply.github.com>
+Date:   Sat Jan 25 23:11:52 2020 +0200
+
+    Create README.md
+
+commit bffb71c8b01e4df331e8df1bc9ccb6b099173c08
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Sat Jan 25 19:41:02 2020 +0200
+
+    commit
+
+commit f28f66410dd5a175da604bb3e25d75be4842838b
+Author: OrtalLankri <AZsx1998>
+Date:   Sat Jan 25 19:12:29 2020 +0200
+
+    commit
+
+commit fed1950e1bccbd5d66cb2997e9be6b633626f7bb
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Sat Jan 25 19:09:22 2020 +0200
+
+    commit
+
+commit 3591825e6858dd55beee64e107e8b5a72dbb1f91
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 22 21:11:02 2020 +0200
+
+    commit
+
+commit c8b1121ec2b5e98804a5c678e616c0c6710e9bba
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 22 19:21:42 2020 +0200
+
+    commit
+
+commit 6d2fdc990b7f41c143793fa42e8d10eed3e2c6cc
+Author: OrtalLankri <AZsx1998>
+Date:   Wed Jan 22 16:51:42 2020 +0200
+
+    commit
+
+commit e658a8a073dddba4eb244b30463a1616cef7a582
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 22 00:50:44 2020 +0200
+
+    commit
+
+commit 3a53a3a2d50343fcb110dac95800a5fb8a6000b9
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Tue Jan 21 17:58:15 2020 +0200
+
+    commit
+
+commit 17d76280b9684511ced53101591c3e5995bb338a
+Merge: 0f4cfbf c03c624
+Author: OrtalLankri <AZsx1998>
+Date:   Tue Jan 21 16:31:23 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0f4cfbf36ee37647d55ffad69d32c28583dbd8d0
+Author: OrtalLankri <AZsx1998>
+Date:   Tue Jan 21 16:31:06 2020 +0200
+
+    commit
+
+commit c03c624c2c48d67d0d3f93d06ddfe61b91d18b8f
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 20 17:47:31 2020 +0200
+
+    commit
+
+commit 8e45ef404c5e6a9e07c09d56fc294bd8e96e1aa6
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 20 17:37:49 2020 +0200
+
+    commit
+
+commit 0a8c45e98c522d16a91940dfbd442ed512f31db5
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 20 17:32:18 2020 +0200
+
+    commit
+
+commit e7cea8311c066bd492244c66c9fb37c0cca1fb8a
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 20 16:33:31 2020 +0200
+
+    commit
+
+commit 637248b2e43ebd5dbaa1a034f16b0f98a54caf96
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 20 16:19:33 2020 +0200
+
+    commit
+
+commit 3e2e0048c70137a7610ebc19e8b97c3a7e1b1468
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 20 16:19:22 2020 +0200
+
+    commit
+
+commit b6ff435401dfc7aabe544f7db3dafbad9d0bd9bf
+Merge: 772cfed ab97083
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 20 16:18:57 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       BestFS.h
+
+commit 772cfedd348e134996108a3115c52dc8c15d22b6
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 20 16:18:05 2020 +0200
+
+    commit
+
+commit ab9708332321356de1bec2f157303fba92e1c7fc
+Author: OrtalLankri <AZsx1998>
+Date:   Sun Jan 19 17:20:01 2020 +0200
+
+    commit
+
+commit 19b859f3171b31c876a1725224bca736b72ae6b1
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Sun Jan 19 16:40:15 2020 +0200
+
+    commit
+
+commit 046954c5d19539cad4b6d91fa147e9e2f16e933a
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Sun Jan 19 15:33:01 2020 +0200
+
+    commit
+
+commit edc949d3da720c9205e17a2a68bebb14a0378ce8
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Fri Jan 17 14:07:51 2020 +0200
+
+    commit
+
+commit 76d66e15d5f800952a523ac144de8025019a1476
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Fri Jan 17 14:05:57 2020 +0200
+
+    commit
+
+commit 32e5dccc2e41db0686b61426bbd36103cb057307
+Author: OrtalLankri <AZsx1998>
+Date:   Thu Jan 16 16:10:23 2020 +0200
+
+    commit
+
+commit a488b47e3b662851d43751203972e984fd880659
+Merge: 2eb7f71 c246f88
+Author: OrtalLankri <AZsx1998>
+Date:   Thu Jan 16 15:35:55 2020 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    # Conflicts:
+    #       cmake-build-debug/OurServer
+
+commit 2eb7f711cc5174aec780c46ee3343c48e6b4b8a8
+Author: OrtalLankri <AZsx1998>
+Date:   Thu Jan 16 15:35:50 2020 +0200
+
+    Merge branch 'master' of /home/ortal/CLionProjects/OurServer with conflicts.
+
+commit c246f8829cb255f79e095f945d59355e78f45d19
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 21:26:24 2020 +0200
+
+    commit
+
+commit a561cfd6f06ef29666fe042da089a70f55490bc1
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 21:12:13 2020 +0200
+
+    commit
+
+commit a7ceea433831951db052aa5e5f1b4fdf9c6c8083
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 19:29:31 2020 +0200
+
+    commit
+
+commit ccc6fbb4d79dd910bdf30242416b439830af3f70
+Author: OrtalLankri <AZsx1998>
+Date:   Wed Jan 15 19:23:16 2020 +0200
+
+    commit
+
+commit 5899db0985ba80ea51dc2f49127e1dba8182c83c
+Author: OrtalLankri <AZsx1998>
+Date:   Wed Jan 15 19:22:52 2020 +0200
+
+    commit
+
+commit 64aeef06251343becb5219058a7da528586f065f
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 19:00:03 2020 +0200
+
+    commit
+
+commit a644016f1f21d77655997f2f1f444f8929fc97e6
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 17:35:05 2020 +0200
+
+    commit
+
+commit 910e16df276cb166d544851ceb3a6feeafbacafa
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 17:32:37 2020 +0200
+
+    commit
+
+commit 4248e3fdf3e2b34cce73d197d1ae0927a87a6051
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Wed Jan 15 17:30:36 2020 +0200
+
+    commit
+
+commit 9bf761b81a33e4fe3c02996a1b88b78c89170a6b
+Author: OrtalLankri <AZsx1998>
+Date:   Wed Jan 15 14:58:28 2020 +0200
+
+    commit
+
+commit c6843503dfd1123b5137121ea5285d8931504fd8
+Author: OrtalLankri <AZsx1998>
+Date:   Wed Jan 15 14:58:12 2020 +0200
+
+    commit
+
+commit 9fb62f6babb13ab97afb0a1d1140247ce66095ac
+Author: OrtalLankri <AZsx1998>
+Date:   Tue Jan 14 17:59:55 2020 +0200
+
+    commit
+
+commit c10d3152481c83a84d3c9525b4534299d67d4dbe
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 21:07:33 2020 +0200
+
+    jj
+
+commit aa7b728ccae150eee75c2d76ee1e7c683ad0cb54
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 17:32:46 2020 +0200
+
+    jj
+
+commit 931f673a0404d38f3523a3a81e83461fe9911bd3
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 17:29:53 2020 +0200
+
+    jj
+
+commit 74a27da762c94314fc8f25ad6b853f72104e6dd0
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 17:29:41 2020 +0200
+
+    jj
+
+commit 432caaf3b062aba99ca5ba89e7f6ebe72296bca1
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 17:28:32 2020 +0200
+
+    jj
+
+commit 1da9a1ac0ce4e536b036ca915fc8466b656da254
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 17:26:42 2020 +0200
+
+    start ex4
+
+commit ee0038ce3dd7620d9d19368c193af88e588f6ec4
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 16:24:31 2020 +0200
+
+    jj
+
+commit d21596cace7d63da24f6c3313bfce01a25740883
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 16:22:11 2020 +0200
+
+    jj
+
+commit 5c0af590c34ce4e8fb8b52ca7df9b69101dad6ef
+Author: adiM3344 <adi.me123@gamil.com>
+Date:   Mon Jan 13 16:08:27 2020 +0200
+
+    jj
+
+commit 358902814bea028089b1d08dffd28c6d48172e71
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 14:36:28 2020 +0200
+
+    start ex4
+
+commit 65a1ee55084b021af0a21ffa5263148a84a8bb2c
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 14:06:31 2020 +0200
+
+    start ex4
+
+commit 25656f7bd6bf9abfbfff53bb61562dda4fda68d0
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 14:02:29 2020 +0200
+
+    start ex4
+
+commit a280f514149c2c46fbce66f8b74552aaa41e2985
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 14:00:09 2020 +0200
+
+    start ex4
+
+commit 0e9d8e7c1cb81b8b4beb1cc5bde756224ea3ba3f
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:59:22 2020 +0200
+
+    start ex4
+
+commit 25c48b1ec32f91481a491ff4c7e07a1c0aa95daa
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:56:24 2020 +0200
+
+    start ex4
+
+commit 612c7f4d2a4971befe71d1cf4534037b0c2431af
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:55:25 2020 +0200
+
+    start ex4
+
+commit 152246cb13bb57fcc35e59bf81c80a35ac6b81a9
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:52:45 2020 +0200
+
+    name ex4
+
+commit ee644c2943c8d93a98cb63fc00c1503b1254c8de
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:50:28 2020 +0200
+
+    name
+
+commit 5b31b0e0cb12cda767833ffd0d800ea363e9a68e
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:47:36 2020 +0200
+
+    name
+
+commit 78fcef201c841f1f779ec2b259ceaa4db0a2e828
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:45:17 2020 +0200
+
+    name
+
+commit 31b5639dd52586894acf7a24fe2483dbccc769ea
+Author: OrtalLankri <AZsx1998>
+Date:   Mon Jan 13 13:44:08 2020 +0200
+
+    name

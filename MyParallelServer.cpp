@@ -1,62 +1,49 @@
 
-#include <strings.h>
 #include "MyParallelServer.h"
 
-
-
 void MyParallelServer::open(int port, ClientHandler *ch) {
-
-    int portNo, listenFd;
-    struct sockaddr_in svrAdd, clntAdd;
-    int connFd;
-    vector<thread*> vec_thread;
-    portNo = port;
     //create socket
-    listenFd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if(listenFd < 0)
-    {
+    int socketfd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
+    this->socketfdp = socketfd;
+    if(socketfd < 0) {
         cerr << "Cannot open socket" << endl;
         return;
     }
-    bzero((char*) &svrAdd, sizeof(svrAdd));
-    svrAdd.sin_family = AF_INET;
-    svrAdd.sin_addr.s_addr = INADDR_ANY;
-    svrAdd.sin_port = htons(portNo);
+    struct sockaddr_in address, clntAdd;
+    bzero((char*) &address, sizeof(address));
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(port);
     //bind socket
-    if(bind(listenFd, (struct sockaddr *)&svrAdd, sizeof(svrAdd)) < 0)
-    {
+    if(bind(socketfd, (struct sockaddr *)&address, sizeof(address)) < 0) {
         cerr << "Cannot bind" << endl;
         return;
     }
-    listen(listenFd, 10);
-    bool is_connected = true;
+    listen(socketfd, 10);
+    vector<thread*> threads;
     int threadsNum = 0;
-    while (threadsNum < 10 && is_connected)
+    while (threadsNum < 10)
     {
         socklen_t len = sizeof(clntAdd);
         cout << "Server is now listening ..." << endl;
-        connFd = accept(listenFd, (struct sockaddr *)&clntAdd, &len);
-        if (connFd < 0)
-        {
-            cerr << "Arror accepting client" << endl;
-            return;
+        int client_socket = accept(socketfd, (struct sockaddr *)&clntAdd, &len);
+        if (client_socket < 0) {
+            cerr << "Error accepting client" << endl;
+            break;
         }
-        else
-        {
+        else {
             cout << "Server is now connected" << endl;
+            ClientHandler *chClone = ch->clone();
+            thread *t = new thread(&MyParallelServer::clientThread, chClone, client_socket);
+            threads.push_back(t);
+            threadsNum++;
         }
-        ClientHandler* chClone = ch->clone();
-        thread *t_ch = new thread(&MyParallelServer::clientThread, chClone, connFd);
-        vec_thread.push_back(t_ch);
-        threadsNum++;
     }
-    for(int i = 0; i < vec_thread.size(); i++)
-    {
-        vec_thread[i]->join();
+    for(thread* t : threads) {
+        t->join();
     }
     stop();
 }
-
 
 void MyParallelServer::stop(){
     close(this->socketfdp);

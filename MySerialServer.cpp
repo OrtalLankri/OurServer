@@ -38,7 +38,7 @@ void MySerialServer::open(int port, ClientHandler *c) {
         FD_ZERO(&rfds);
         FD_SET(socketfd, &rfds);
         struct timeval tv;
-        tv.tv_sec = 10;
+        tv.tv_sec = 120;
         setsockopt(socketfd, SOL_SOCKET, SO_RCVTIMEO, (const char *) &tv, sizeof(tv));
         connect = select(socketfd + 1, &rfds, (fd_set *) 0, (fd_set *) 0, &tv);
         if (connect < 0) {
@@ -55,5 +55,5 @@ void MySerialServer::open(int port, ClientHandler *c) {
         cout << "Server is now connected" << endl;
         c->handleClient(client_socket);
     }
-    stop();
+    this->stop();
 }
